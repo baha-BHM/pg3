@@ -73,11 +73,19 @@ a{color:var(--blue)}
 #topIn{max-inline-size:1180px; margin-inline:auto; padding:10px 16px;
   display:flex; align-items:center; gap:12px}
 #brand{display:flex; flex-direction:column; gap:1px; min-inline-size:0; margin-inline-end:auto}
-#brand .k{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em;
-  color:var(--ink-3); text-transform:uppercase}
+#brand .k{font-size:10.5px; color:var(--ink-3); line-height:1.45}
+#brand .c{font-size:11.5px; font-weight:700; color:var(--blue); line-height:1.4}
 #brand .t{font-size:17px; font-weight:700; letter-spacing:-.01em;
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
-main{inline-size:100%; max-inline-size:1180px; margin-inline:auto; padding:20px 16px 48px}
+main{inline-size:100%; max-inline-size:1180px; margin-inline:auto; padding:20px 16px 28px}
+/* ── כותרת תחתונה ──
+   הדף הזה נפתח אצל אנשים שאינם מהקורס ואינם מהטכניון. בלי שורת בעלות
+   ברורה, צילום מסך ממנו נודד הלאה בלי שאיש יודע של מי הוא. */
+#foot{inline-size:100%; max-inline-size:1180px; margin-inline:auto;
+  padding:16px 16px 40px; border-block-start:1px solid var(--rule);
+  color:var(--ink-3); font-size:12px; line-height:1.75}
+#foot b{color:var(--ink-2); font-weight:700}
+#foot .cr{margin-block-start:7px; font-size:11.5px}
 
 .card{background:var(--card); border:1px solid var(--rule); border-radius:14px; box-shadow:var(--shadow)}
 .pad{padding:18px}
@@ -212,12 +220,21 @@ textarea:focus, input:focus{border-color:var(--blue); outline:none}
 <body>
 <div id="top"><div id="topIn">
   <div id="brand">
-    <span class="k">Technion · Landscape Architecture</span>
+    <span class="k">הטכניון · הפקולטה לארכיטקטורה ובינוי ערים · התכנית לאדריכלות נוף</span>
+    <span class="c">פרטי גן 3 — מבנה ופרטי גנים</span>
     <span class="t" id="brandT">סקר שיתוף ציבור</span>
   </div>
   <span id="topChip"></span>
 </div></div>
 <main id="main"><div class="card pad"><p class="note">טוען…</p></div></main>
+<footer id="foot">
+  <div><b>פרטי גן 3 — מבנה ופרטי גנים</b> · התכנית לאדריכלות נוף ·
+    הפקולטה לארכיטקטורה ובינוי ערים · הטכניון — מכון טכנולוגי לישראל</div>
+  <div>מנחים: אד׳ נוף בהא מילחם · אד׳ נוף נור סעד · תשפ״ז 2026/27</div>
+  <div class="cr">© כל הזכויות שמורות. התכנים, השאלון, המודל ותוצאות הסקר הם חומר
+    לימודי של הקורס. אין להעתיק, לשכפל, לפרסם או להעביר אותם, כולם או חלקם,
+    ללא אישור בכתב מהמנחים.</div>
+</footer>
 <div id="toast" hidden></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -1212,7 +1229,7 @@ function viewResults(){
         '</div>';
       }).join('') +
 
-      '<p class="foot">הסקר נערך על ידי סטודנטים שנה ג׳ בקורס פרטי גן 3, הפקולטה ' +
+      '<p class="foot">הסקר נערך על ידי סטודנטים לאדריכלות נוף בקורס פרטי גן 3, הפקולטה ' +
       'לארכיטקטורה ובינוי ערים, הטכניון. התשובות נאספו בעילום שם.</p>' +
     '</div>';
 
