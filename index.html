@@ -1,0 +1,1482 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>סקר שיתוף ציבור · פרטי גן 3</title>
+<meta name="description" content="סקר שיתוף ציבור להרחבה שמעל הפקולטה לארכיטקטורה — הטכניון.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F7F5F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --sans:"Heebo","Segoe UI",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --paper:#F7F5F1; --card:#FFFFFF; --sunk:#EFECE6;
+  --ink:#15191D; --ink-2:#3C444C; --ink-3:#6E7880;
+  --rule:#DCD7CE; --rule-2:#C6BFB3;
+  --blue:#1E4E8C; --blue-soft:#E7EFF9;
+  --amber:#B5661A; --amber-soft:#F8EEE1;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4;
+  --tone-good:#1baf7a; --tone-warn:#e34948; --tone-idea:#2a78d6;
+  --heat-0:#cde2fb; --heat-1:#86b6ef; --heat-2:#3987e5; --heat-3:#256abf; --heat-4:#0d366b;
+  --shadow:0 1px 2px rgba(21,25,29,.06), 0 8px 24px rgba(21,25,29,.05);
+  --stage-wash:rgba(247,245,241,.82);
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#14171A; --card:#1B1F23; --sunk:#202529;
+    --ink:#E8EBEE; --ink-2:#B4BCC3; --ink-3:#848E96;
+    --rule:#2C3238; --rule-2:#3C444C;
+    --blue:#7DACE4; --blue-soft:#1B2A3D;
+    --amber:#E09449; --amber-soft:#332415;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
+    --tone-good:#199e70; --tone-warn:#e66767; --tone-idea:#3987e5;
+    --heat-0:#184f95; --heat-1:#256abf; --heat-2:#3987e5; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+    --stage-wash:rgba(20,23,26,.82);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#14171A; --card:#1B1F23; --sunk:#202529;
+  --ink:#E8EBEE; --ink-2:#B4BCC3; --ink-3:#848E96;
+  --rule:#2C3238; --rule-2:#3C444C;
+  --blue:#7DACE4; --blue-soft:#1B2A3D;
+  --amber:#E09449; --amber-soft:#332415;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
+  --tone-good:#199e70; --tone-warn:#e66767; --tone-idea:#3987e5;
+  --heat-0:#184f95; --heat-1:#256abf; --heat-2:#3987e5; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+  --stage-wash:rgba(20,23,26,.82);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.55;
+  direction:rtl; -webkit-text-size-adjust:100%;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-weight:700; line-height:1.2}
+p{margin:0}
+button{font:inherit; color:inherit; cursor:pointer}
+a{color:var(--blue)}
+:focus-visible{outline:2.5px solid var(--blue); outline-offset:2px; border-radius:4px}
+
+#top{position:sticky; top:env(safe-area-inset-top,0px); z-index:40;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(10px); border-block-end:1px solid var(--rule)}
+#topIn{max-inline-size:1180px; margin-inline:auto; padding:10px 16px;
+  display:flex; align-items:center; gap:12px}
+#brand{display:flex; flex-direction:column; gap:1px; min-inline-size:0; margin-inline-end:auto}
+#brand .k{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em;
+  color:var(--ink-3); text-transform:uppercase}
+#brand .t{font-size:17px; font-weight:700; letter-spacing:-.01em;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+main{inline-size:100%; max-inline-size:1180px; margin-inline:auto; padding:20px 16px 48px}
+
+.card{background:var(--card); border:1px solid var(--rule); border-radius:14px; box-shadow:var(--shadow)}
+.pad{padding:18px}
+.eyebrow{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3)}
+.lede{color:var(--ink-2); font-size:15px; line-height:1.65; max-inline-size:62ch}
+.note{font-size:13px; color:var(--ink-3); line-height:1.6}
+.hr{block-size:1px; background:var(--rule); border:0; margin-block:16px}
+.row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+.btn{border:1px solid var(--rule-2); background:var(--card); color:var(--ink);
+  padding:9px 16px; border-radius:9px; font-size:14.5px; font-weight:600;
+  display:inline-flex; align-items:center; gap:7px; text-decoration:none}
+.btn:hover{border-color:var(--ink-3)}
+.btn.primary{background:var(--blue); border-color:var(--blue); color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#0D1218}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.primary{color:#0D1218}}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn:disabled{opacity:.45; cursor:not-allowed}
+.btn.sm{padding:6px 11px; font-size:13px; border-radius:8px}
+.btn.danger{color:var(--tone-warn); border-color:var(--tone-warn)}
+.btn.solidDanger{background:var(--tone-warn); border-color:var(--tone-warn); color:#fff}
+.chip{font-family:var(--mono); font-size:11.5px; padding:3px 9px; border-radius:999px;
+  border:1px solid var(--rule-2); color:var(--ink-2); background:var(--sunk);
+  white-space:nowrap; display:inline-block}
+#topChip{flex:none}
+.chip.live{border-color:var(--tone-good); color:var(--tone-good)}
+.chip.lock{border-color:var(--amber); color:var(--amber); background:var(--amber-soft)}
+
+.split{display:grid; gap:18px}
+@media(min-width:900px){
+  .split{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); align-items:start}
+  .split>.sticky{position:sticky; top:calc(env(safe-area-inset-top,0px) + 68px)}
+}
+.sec{display:flex; flex-direction:column; gap:14px}
+.grid2{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+
+#stageBox{aspect-ratio:4/3; max-inline-size:100%}
+#stageBox.res{aspect-ratio:16/10}
+#stage{position:relative; border-radius:14px; overflow:hidden; background:var(--sunk);
+  border:1px solid var(--rule); block-size:100%}
+#stage canvas{display:block; inline-size:100%; block-size:100%; touch-action:none}
+#stage .stMsg{position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:22px; font-size:13.5px; color:var(--ink-2); line-height:1.6;
+  pointer-events:none; background:var(--stage-wash); backdrop-filter:blur(1px)}
+#stage .stMsg.err{color:var(--amber); font-family:var(--mono); font-size:12px; direction:ltr}
+#stageCtl{position:absolute; inset-block-start:10px; inset-inline-start:10px; z-index:3;
+  display:flex; gap:4px; background:color-mix(in srgb, var(--card) 90%, transparent);
+  border:1px solid var(--rule); border-radius:9px; padding:3px}
+#stageCtl button{border:0; background:transparent; border-radius:6px; padding:5px 9px;
+  font-size:12px; font-weight:600; color:var(--ink-2); line-height:1.2}
+#stageCtl button:hover{background:var(--sunk); color:var(--ink)}
+#stageCtl button[aria-pressed="true"]{background:var(--ink); color:var(--card)}
+#stageCtl .z{font-family:var(--mono); font-size:14px; padding-inline:8px}
+#hint{position:absolute; inset-block-end:10px; inset-inline:10px; pointer-events:none; z-index:2;
+  font-size:12.5px; font-family:var(--mono); color:var(--ink-2);
+  background:color-mix(in srgb, var(--card) 88%, transparent); border:1px solid var(--rule);
+  padding:5px 10px; border-radius:8px; text-align:center}
+
+#pinbar{display:flex; gap:8px; flex-wrap:wrap; margin-block-start:12px}
+.ptBtn{border:1.5px solid var(--rule-2); background:var(--card); border-radius:11px;
+  padding:9px 13px; display:flex; align-items:center; gap:8px; font-size:14px; font-weight:600}
+.ptBtn .ic{font-size:17px; line-height:1}
+.ptBtn[aria-pressed="true"]{border-color:currentColor; box-shadow:inset 0 0 0 1px currentColor}
+.pinList{display:flex; flex-direction:column; gap:8px}
+.pinRow{display:flex; gap:10px; align-items:flex-start; padding:10px 12px;
+  border:1px solid var(--rule); border-radius:10px; background:var(--card)}
+.pinRow .ic{font-size:18px; line-height:1.2; flex:none}
+.pinRow .bd{flex:1; min-inline-size:0}
+.pinRow .lb{font-size:12.5px; font-weight:600}
+
+.q{border-block-start:1px solid var(--rule); padding-block:18px}
+.q:first-of-type{border-block-start:0; padding-block-start:4px}
+.qh{display:flex; gap:10px; align-items:baseline; margin-block-end:4px}
+.qh b{font-family:var(--mono); color:var(--blue); font-size:13px; flex:none}
+.qh .t{font-weight:700; font-size:16px; line-height:1.35}
+.qh .req{color:var(--tone-warn); font-size:13px}
+.qhelp{font-size:13.5px; color:var(--ink-3); margin-block-end:10px; line-height:1.55}
+.opts{display:flex; flex-direction:column; gap:7px}
+.opt{display:flex; align-items:center; gap:10px; padding:11px 13px;
+  border:1.5px solid var(--rule); border-radius:10px; background:var(--card); font-size:15px}
+.opt:hover{border-color:var(--rule-2)}
+.opt input{inline-size:18px; block-size:18px; accent-color:var(--blue); flex:none; margin:0}
+.opt:has(input:checked){border-color:var(--blue); background:var(--blue-soft)}
+.scale{display:flex; gap:6px; flex-wrap:wrap}
+.scale label{flex:1 1 56px; min-inline-size:56px; text-align:center; padding:11px 4px;
+  border:1.5px solid var(--rule); border-radius:10px; font-family:var(--mono);
+  font-size:15px; font-weight:600; position:relative}
+.scale label:has(input:checked){border-color:var(--blue); background:var(--blue-soft); color:var(--blue)}
+.scale input{position:absolute; opacity:0; pointer-events:none}
+.scaleEnds{display:flex; justify-content:space-between; font-size:12px; color:var(--ink-3); margin-block-start:6px}
+textarea, input[type="text"], input[type="password"]{
+  inline-size:100%; font:inherit; font-size:15px; color:var(--ink); background:var(--card);
+  border:1.5px solid var(--rule); border-radius:10px; padding:10px 12px; resize:vertical}
+textarea{font-family:var(--mono); font-size:12.5px; line-height:1.5}
+textarea:focus, input:focus{border-color:var(--blue); outline:none}
+
+/* ── תוצאות ── */
+.bars{display:flex; flex-direction:column; gap:9px; margin-block-start:10px}
+.bar{display:grid; grid-template-columns:minmax(72px,30%) 1fr auto; gap:10px; align-items:center}
+.bar .lb{font-size:13.5px; color:var(--ink-2); overflow-wrap:anywhere}
+.bar .tr{background:var(--sunk); border-radius:5px; block-size:22px; position:relative; overflow:hidden}
+.bar .fl{position:absolute; inset-block:0; inset-inline-start:0; border-radius:0 5px 5px 0; min-inline-size:3px}
+.bar .vl{font-family:var(--mono); font-size:13px; color:var(--ink-2); font-variant-numeric:tabular-nums; white-space:nowrap}
+.statRow{display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px}
+.stat{background:var(--sunk); border-radius:11px; padding:13px 14px}
+.stat .n{font-family:var(--mono); font-size:27px; font-weight:600; line-height:1; font-variant-numeric:tabular-nums}
+.stat .l{font-size:12.5px; color:var(--ink-3); margin-block-start:5px}
+.quotes{display:flex; flex-direction:column; gap:8px; max-block-size:340px; overflow:auto}
+.quote{border-inline-start:3px solid var(--rule-2); padding:4px 11px; font-size:14.5px;
+  color:var(--ink-2); line-height:1.55}
+.fchip{border:1.5px solid var(--rule); background:var(--card); border-radius:999px;
+  padding:6px 13px; font-size:13.5px; font-weight:600; color:var(--ink-2)}
+.fchip[aria-pressed="true"]{border-color:var(--blue); background:var(--blue-soft); color:var(--blue)}
+#legend{display:flex; gap:10px; flex-wrap:wrap; margin-block-start:10px; align-items:center}
+.lg{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--ink-3)}
+.lg i{inline-size:26px; block-size:10px; border-radius:3px; display:inline-block; flex:none;
+  background:linear-gradient(to left, var(--heat-0), var(--heat-2), var(--heat-4))}
+.miniWrap{display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.mini .cap{font-size:12.5px; font-weight:600; margin-block-end:6px; display:flex; gap:6px; align-items:center}
+
+.foot{font-size:12.5px; color:var(--ink-3); line-height:1.6; max-inline-size:62ch}
+.glyph{line-height:1}
+#toast{position:fixed; inset-block-end:calc(16px + env(safe-area-inset-bottom,0px));
+  inset-inline:16px; z-index:90; margin-inline:auto; max-inline-size:440px;
+  background:var(--ink); color:var(--paper); padding:11px 16px; border-radius:11px;
+  font-size:14px; text-align:center; box-shadow:var(--shadow)}
+.offline{background:var(--amber-soft); border:1px solid var(--amber); color:var(--amber);
+  border-radius:10px; padding:10px 13px; font-size:13.5px; line-height:1.55}
+.danger-zone{border:1.5px solid var(--tone-warn); border-radius:12px; padding:14px;
+  background:color-mix(in srgb, var(--tone-warn) 6%, transparent)}
+</style>
+</head>
+<body>
+<div id="top"><div id="topIn">
+  <div id="brand">
+    <span class="k">Technion · Landscape Architecture</span>
+    <span class="t" id="brandT">סקר שיתוף ציבור</span>
+  </div>
+  <span id="topChip"></span>
+</div></div>
+<main id="main"><div class="card pad"><p class="note">טוען…</p></div></main>
+<div id="toast" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="roofsite-v11.js"></script>
+<script src="roofmesh.js"></script>
+<script>
+/* ══════════════════════════════════════════════════════════════════
+   סקר שיתוף ציבור — דף עצמאי, מחוץ לארטיפקט.
+   מי שסורק את הברקוד נכנס בלי חשבון ובלי הרשאות.
+
+   שלושה מסכים:
+     #/          השאלון
+     #/results   התוצאות — נפתחות לציבור ברגע שהסקר נסגר
+     #/admin     ניהול — קוד אחד, וממנו סוגרים את הסקר
+
+   השאלון, התשובות ומצב הסקר (פתוח/סגור) יושבים כולם בצד השרת.
+   הדף הזה לא מחזיק כלום חוץ מתשובה שעוד לא הספיקה להישלח.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── נקודת הקצה ──
+   ה-Web app URL של Apps Script. עד שהיא ריקה הדף רץ מקומית מ-config.json,
+   והתשובות נשמרות במכשיר בלבד. */
+var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxTp7Mffwo8_KBPF7D6exsvtm3BKhfcjQ529Aj8w7L-YN5ijiminN71BtxpOP73ussJ0A/exec';
+
+var T = window.THREE;
+var MESH = window.__ROOF_MESH || null;
+var SITE = window.__ROOF_SITE || null;
+var SUNK = 0.45, PARAPET_H = 1.05;
+var QKEY = 'pg3.survey.queue', KKEY = 'pg3.survey.key';
+
+if (SITE && SITE.ring && SITE.ring.length){
+  var _rx = SITE.ring.map(function(p){return p[0];});
+  var _rz = SITE.ring.map(function(p){return p[1];});
+  SITE.ringBB = {x0:Math.min.apply(null,_rx), x1:Math.max.apply(null,_rx),
+                 z0:Math.min.apply(null,_rz), z1:Math.max.apply(null,_rz)};
+}
+
+/* ══════════ עזר ══════════ */
+function el(i){ return document.getElementById(i); }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function uid(){ return Math.random().toString(36).slice(2,9); }
+function toast(t, ms){
+  var b = el('toast'); if (!b) return;
+  b.textContent = t; b.hidden = false;
+  clearTimeout(toast._t); toast._t = setTimeout(function(){ b.hidden = true; }, ms||2600);
+}
+function toneVar(t){ return 'var(--tone-' + (t==='warn'?'warn':t==='idea'?'idea':'good') + ')'; }
+function lsGet(k, store){ try { return JSON.parse((store||localStorage).getItem(k) || 'null'); } catch(e){ return null; } }
+function lsSet(k, v, store){ try { (store||localStorage).setItem(k, JSON.stringify(v)); } catch(e){ } }
+function heb(d){
+  if (!d) return '';
+  var t = new Date(d);
+  if (isNaN(t)) return String(d).slice(0,10);
+  return t.getDate() + '.' + (t.getMonth()+1) + '.' + t.getFullYear();
+}
+
+/* ══════════ השאלון ══════════ */
+var DEFAULT_ROLES = ['סטודנט/ית בפקולטה','סגל הפקולטה','סטודנט/ית מפקולטה אחרת',
+                     'עובד/ת טכניון','מבקר/ת בקמפוס'];
+var ROLE_ASK_MORE = 'סטודנט/ית מפקולטה אחרת';
+var ROLE_RENAME = {'אורח/ת':'מבקר/ת בקמפוס', 'אורח':'מבקר/ת בקמפוס'};
+function migrateRoles(list){
+  if (!list || !list.length) return DEFAULT_ROLES.slice();
+  var seen = {}, out = [];
+  list.forEach(function(r){
+    var v = ROLE_RENAME[String(r).trim()] || r, k = String(v).trim();
+    if (!k || seen[k]) return;
+    seen[k] = 1; out.push(v);
+  });
+  return out;
+}
+function normCfg(d){
+  d = d || {};
+  return {
+    title:d.title||'', intro:d.intro||'', thanks:d.thanks||'', closing:d.closing||'',
+    roleLabel:d.roleLabel||'מי אתם?', roles:migrateRoles(d.roles),
+    pinTypes:d.pinTypes||[], questions:d.questions||[],
+    area:d.area||null, updatedAt:d.updatedAt||''
+  };
+}
+/* שאלה חיה = מנוסחת. שלד ריק לא מוצג לציבור. */
+function liveQs(c){
+  return ((c&&c.questions)||[]).filter(function(q){
+    if (!q || !(q.text||'').trim()) return false;
+    if (q.type==='single' || q.type==='multi')
+      return (q.opts||[]).filter(function(o){return (o||'').trim();}).length >= 2;
+    return true;
+  });
+}
+function livePins(c){
+  return ((c&&c.pinTypes)||[]).filter(function(p){ return p && (p.label||'').trim(); });
+}
+function isReady(c){ return !!(c && (c.title||'').trim()) && liveQs(c).length > 0; }
+
+/* ══════════ מצב ══════════ */
+var ST = {open:true, closedAt:'', n:0, cfg:null, rows:null, key:'', offline:false};
+var MINE = {role:'', which:'', answers:{}, pins:[]};
+var PINTYPE = '';
+var RES = {roleFilter:'', heatType:''};
+
+/* ══════════ מערכת הקואורדינטות ══════════
+   הסימונים נשמרים כ-u,v ביחס לאותה מסגרת שבדף הקורס — אחרת סימון
+   שנאסף כאן ייפול במקום אחר על המודל שם. */
+function defaultRect(){
+  if (SITE && SITE.ringBB){
+    var B = SITE.ringBB;
+    return {cx:(B.x0+B.x1)/2, cz:(B.z0+B.z1)/2, w:B.x1-B.x0, d:B.z1-B.z0, a:0};
+  }
+  var F = (MESH && MESH.plazaBB) || {x0:-40,x1:40,z0:-40,z1:40};
+  return {cx:(F.x0+F.x1)/2, cz:(F.z0+F.z1)/2, w:F.x1-F.x0, d:F.z1-F.z0, a:0};
+}
+function areaRect(){
+  var a = ST.cfg && ST.cfg.area;
+  if (!a || !isFinite(a.w) || !isFinite(a.d) || !a.w || !a.d) return null;
+  return {cx:+a.cx||0, cz:+a.cz||0, w:+a.w, d:+a.d, a:+a.a||0};
+}
+function uvToWorld(u,v){
+  var r = areaRect() || defaultRect(), ca = Math.cos(r.a), sa = Math.sin(r.a);
+  var lx = (u-0.5)*r.w, lz = (v-0.5)*r.d;
+  return {x: r.cx + lx*ca - lz*sa, z: r.cz + lx*sa + lz*ca};
+}
+function worldToUV(x,z){
+  var r = areaRect() || defaultRect(), ca = Math.cos(r.a), sa = Math.sin(r.a);
+  var dx = x-r.cx, dz = z-r.cz;
+  return {u: ( dx*ca + dz*sa)/r.w + 0.5, v: (-dx*sa + dz*ca)/r.d + 0.5};
+}
+
+/* ══════════ המודל ══════════ */
+var R = {ready:false, renderer:null, scene:null, cam:null, roofMesh:null, mainMesh:null,
+         pinGrp:null, host:null, az:-0.72, el:0.62, zoom:1, target:null, raf:0,
+         _top:null, pick:null};
+var FIT = {span:23, r:70, y:1.2, depth:400};
+if (MESH && MESH.span){
+  FIT.span = Math.max(MESH.span[0], MESH.span[2]) * 0.62;
+  FIT.r    = Math.max(MESH.span[0], MESH.span[2]) * 2.2;
+  FIT.y    = MESH.lo[1] + MESH.span[1] * 0.42;
+}
+var PIN_K = MESH ? 3.2 : 1;
+
+function meshGeo(part){
+  var bin = atob(part.b64), N = bin.length/2, i;
+  var q = new Uint16Array(N);
+  for (i=0;i<N;i++) q[i] = bin.charCodeAt(i*2) | (bin.charCodeAt(i*2+1) << 8);
+  var pos = new Float32Array(N);
+  for (i=0;i<N;i+=3){
+    pos[i]   = MESH.lo[0] + q[i]  /65535*MESH.span[0];
+    pos[i+1] = MESH.lo[1] + q[i+1]/65535*MESH.span[1];
+    pos[i+2] = MESH.lo[2] + q[i+2]/65535*MESH.span[2];
+  }
+  var geo = new T.BufferGeometry();
+  geo.setAttribute('position', new T.BufferAttribute(pos, 3));
+  geo.computeVertexNormals();
+  return geo;
+}
+/* גוון לכל משולש — שיפוע, גובה וקווי מפלס — אחרת המסה כתם לבן אחד */
+var VERT = 0.46, STEPS = 14, H_LO = 0.82, H_HI = 1.14;
+function shadeGeo(geo, base){
+  var pos = geo.attributes.position.array, n = pos.length;
+  var col = new Float32Array(n);
+  var yLo = MESH.lo[1], ySpan = Math.max(1e-6, MESH.span[1]);
+  for (var i=0;i<n;i+=9){
+    var ay=pos[i+1], by=pos[i+4], cy=pos[i+7];
+    var ux=pos[i+3]-pos[i], uy=by-ay, uz=pos[i+5]-pos[i+2];
+    var vx=pos[i+6]-pos[i], vy=cy-ay, vz=pos[i+8]-pos[i+2];
+    var ny=uz*vx-ux*vz, nx=uy*vz-uz*vy, nz=ux*vy-uy*vx;
+    var ln=Math.sqrt(nx*nx+ny*ny+nz*nz) || 1, up = ny/ln;
+    var slope = up >= 0 ? (VERT + (1-VERT)*up) : (VERT * (1 + 0.55*up));
+    var h = (((ay+by+cy)/3) - yLo)/ySpan;
+    h = h < 0 ? 0 : h > 1 ? 1 : h;
+    var k = slope * (H_LO + (H_HI-H_LO)*(Math.floor(h*STEPS)/STEPS));
+    for (var j=0;j<9;j+=3){
+      col[i+j] = base[0]*k; col[i+j+1] = base[1]*k; col[i+j+2] = base[2]*k;
+    }
+  }
+  geo.setAttribute('color', new T.BufferAttribute(col, 3));
+  return geo;
+}
+function edgeGeo(part){
+  var bin = atob(part.b64), N = bin.length/2;
+  var pos = new Float32Array(N);
+  for (var i=0;i<N;i++){
+    var q = bin.charCodeAt(i*2) | (bin.charCodeAt(i*2+1) << 8);
+    pos[i] = MESH.lo[i%3] + q/65535*MESH.span[i%3];
+  }
+  var geo = new T.BufferGeometry();
+  geo.setAttribute('position', new T.BufferAttribute(pos, 3));
+  return geo;
+}
+/* UV מישוריים על מלבן הרחבה — בלעדיהם מפת החום לא נצבעת על המודל */
+function plazaUV(geo){
+  var F = (MESH && MESH.plazaBB) || {x0:-1,x1:1,z0:-1,z1:1};
+  var pos = geo.attributes.position.array, n = pos.length/3;
+  var uv = new Float32Array(n*2), dx = (F.x1-F.x0)||1, dz = (F.z1-F.z0)||1;
+  for (var i=0;i<n;i++){
+    uv[i*2]   = (pos[i*3]   - F.x0)/dx;
+    uv[i*2+1] = (pos[i*3+2] - F.z0)/dz;
+  }
+  geo.setAttribute('uv', new T.BufferAttribute(uv, 2));
+  return geo;
+}
+function buildRoof(){
+  var g = new T.Group();
+  function surf(rough){
+    return new T.MeshStandardMaterial({color:0xffffff, vertexColors:true, metalness:0,
+      flatShading:true, roughness:rough,
+      polygonOffset:true, polygonOffsetFactor:1.2, polygonOffsetUnits:1.6});
+  }
+  var main = new T.Mesh(shadeGeo(meshGeo(MESH.main), [0.60,0.58,0.54]), surf(.92));
+  g.add(main); R.mainMesh = main;
+  var plaza = new T.Mesh(plazaUV(shadeGeo(meshGeo(MESH.plaza), [0.72,0.70,0.64])), surf(.96));
+  g.add(plaza); R.roofMesh = plaza;
+  var lm = new T.LineBasicMaterial({color:0x55514a, transparent:true, opacity:.44});
+  [['main_edges',.40], ['plaza_edges',.58]].forEach(function(e){
+    if (!MESH[e[0]] || !MESH[e[0]].b64) return;
+    var m = lm.clone(); m.opacity = e[1];
+    g.add(new T.LineSegments(edgeGeo(MESH[e[0]]), m));
+  });
+  return g;
+}
+/* המעקה חסר במודל המדוד, והוא מה שמסביר שזו רחבה ולא גג פתוח */
+function buildSiteWork(){
+  var g = new T.Group();
+  if (!SITE || !SITE.parapet) return g;
+  var base = SITE.plazaY;
+  var pm = new T.MeshStandardMaterial({color:0xA9AEB4, roughness:.66, metalness:.16});
+  var cap = new T.MeshStandardMaterial({color:0x8E949B, roughness:.5, metalness:.25});
+  SITE.parapet.forEach(function(line){
+    for (var i=0;i<line.length-1;i++){
+      var a = line[i], b = line[i+1];
+      var dx = b[0]-a[0], dz = b[1]-a[1], L = Math.sqrt(dx*dx+dz*dz);
+      if (L < 0.2) continue;
+      var nx = (dz/L)*0.18, nz = (-dx/L)*0.18;
+      var cx = (a[0]+b[0])/2 + nx, cz = (a[1]+b[1])/2 + nz;
+      var rot = -Math.atan2(dz, dx);
+      var wall = new T.Mesh(new T.BoxGeometry(L+0.3, PARAPET_H + SUNK, 0.22), pm);
+      wall.position.set(cx, base - SUNK + (PARAPET_H + SUNK)/2, cz);
+      wall.rotation.y = rot; g.add(wall);
+      var top = new T.Mesh(new T.BoxGeometry(L+0.34, 0.09, 0.32), cap);
+      top.position.set(cx, base + PARAPET_H + 0.045, cz);
+      top.rotation.y = rot; g.add(top);
+    }
+  });
+  return g;
+}
+function pinMesh(tone, scale){
+  var g = new T.Group();
+  var col = tone==='warn' ? 0xe34948 : tone==='idea' ? 0x2a78d6 : 0x1baf7a;
+  var mat = new T.MeshStandardMaterial({color:col, roughness:.35, metalness:.1});
+  var stem = new T.Mesh(new T.CylinderGeometry(.09,.09,1.5,8), mat);
+  stem.position.y = .75; g.add(stem);
+  var head = new T.Mesh(new T.SphereGeometry(.42,14,12), mat);
+  head.position.y = 1.72; g.add(head);
+  var ring = new T.Mesh(new T.TorusGeometry(.52,.07,8,20),
+    new T.MeshStandardMaterial({color:col, roughness:.6, transparent:true, opacity:.5}));
+  ring.rotation.x = Math.PI/2; ring.position.y = .06; g.add(ring);
+  g.scale.setScalar((scale||1) * PIN_K);
+  return g;
+}
+function plazaTopY(){
+  if (!R.roofMesh) return 0.6;
+  if (R._pgeoTop === undefined){
+    R.roofMesh.geometry.computeBoundingBox();
+    R._pgeoTop = R.roofMesh.geometry.boundingBox.max.y;
+  }
+  return R._pgeoTop + 0.3;
+}
+function fitModel(){
+  if (!R.scene || !T.Box3) return;
+  try {
+    var box = new T.Box3().setFromObject(R.scene);
+    if (!isFinite(box.min.x) || !isFinite(box.max.x)) return;
+    var sx = box.max.x-box.min.x, sy = box.max.y-box.min.y, sz = box.max.z-box.min.z;
+    var diag = Math.sqrt(sx*sx + sy*sy + sz*sz);
+    if (!isFinite(diag) || diag <= 0) return;
+    R.target.set((box.min.x+box.max.x)/2, (box.min.y+box.max.y)/2, (box.min.z+box.max.z)/2);
+    FIT.span = diag*0.44; FIT.r = diag*1.8; FIT.depth = diag*4;
+    /* המבט נפתח על הרחבה — שם עומד מי שסורק, ושם הסימונים */
+    var P = MESH && MESH.plazaBB;
+    if (P && isFinite(P.x0)){
+      R.target.set((P.x0+P.x1)/2, (box.min.y+box.max.y)/2, (P.z0+P.z1)/2);
+      var ps = Math.max(P.x1-P.x0, P.z1-P.z0);
+      /* במסך התוצאות מתקרבים עוד: מפת חום על שטח קטן בתוך פריים גדול
+         פשוט לא נקראת, וכל המסך הזה הוא המפה. */
+      if (isFinite(ps) && ps > 0) FIT.span = Math.min(FIT.span, ps*(R.tight ? 0.50 : 0.78));
+    }
+    R.cam.near = -FIT.depth; R.cam.far = FIT.depth; R.cam.updateProjectionMatrix();
+  } catch(e){ }
+}
+function sizeStage(){
+  if (!R.ready || !R.host) return;
+  var w = R.host.clientWidth, h = R.host.clientHeight;
+  if (!w || !h) return;
+  R.renderer.setSize(w, h, false);
+  var span = FIT.span / R.zoom, a = w/h;
+  R.cam.left = -span*a; R.cam.right = span*a; R.cam.top = span; R.cam.bottom = -span;
+  R.cam.near = -FIT.depth; R.cam.far = FIT.depth;
+  R.cam.updateProjectionMatrix();
+  render();
+}
+function render(){
+  if (!R.ready) return;
+  cancelAnimationFrame(R.raf);
+  R.raf = requestAnimationFrame(function(){
+    var r = FIT.r;
+    R.cam.position.set(
+      r*Math.cos(R.el)*Math.sin(R.az) + R.target.x,
+      r*Math.sin(R.el) + R.target.y,
+      r*Math.cos(R.el)*Math.cos(R.az) + R.target.z);
+    R.cam.lookAt(R.target);
+    R.renderer.render(R.scene, R.cam);
+    var top = R.el > 1.40;
+    if (top !== R._top){ R._top = top; syncStageCtl(); }
+  });
+}
+function pick(e){
+  if (!R.roofMesh || !R.pick) return;
+  var b = R.renderer.domElement.getBoundingClientRect();
+  var p = new T.Vector2(((e.clientX-b.left)/b.width)*2-1, -((e.clientY-b.top)/b.height)*2+1);
+  var ray = new T.Raycaster(); ray.setFromCamera(p, R.cam);
+  var tg = [R.roofMesh]; if (R.mainMesh) tg.push(R.mainMesh);
+  var hit = ray.intersectObjects(tg, false);
+  if (!hit.length){ toast('ההקשה נפלה מחוץ למודל — הקישו על שטח הגג עצמו', 3200); return; }
+  var q = hit[0].point;
+  R.pick(worldToUV(q.x, q.z));
+}
+function stageHostMsg(host, t){
+  if (!host) return;
+  host.innerHTML = '<div class="stMsg err">' + esc(t) + '</div>';
+}
+function initStage(host, onPick, opts){
+  opts = opts || {};
+  R.tight = !!opts.tight;
+  /* הזווית נקבעת פעם אחת לכל סוג מסך. מסך התוצאות נבנה מחדש בכל שינוי
+     סינון, ואסור שסיבוב שהמשתמש עשה ייעלם בכל לחיצה. */
+  var pose = opts.top ? 'top' : 'iso';
+  if (R._pose !== pose){
+    R._pose = pose;
+    if (opts.top){ R.el = 1.553; R.az = 0; } else { R.el = 0.62; R.az = -0.72; }
+    R.zoom = 1;
+  }
+  R.pick = onPick || null;
+  if (!T){ stageHostMsg(host, 'מנוע התלת-מימד לא נטען. רעננו את הדף.'); return; }
+  if (!MESH || !MESH.main || !MESH.plaza){ stageHostMsg(host, 'קובץ המודל לא נטען.'); return; }
+  R.host = host;
+  var cv = document.createElement('canvas'); host.appendChild(cv);
+  try { R.renderer = new T.WebGLRenderer({canvas:cv, antialias:true, alpha:true}); }
+  catch(e){ stageHostMsg(host, 'הדפדפן לא תומך בתצוגה תלת-מימדית.'); return; }
+  R.renderer.setPixelRatio(Math.min(devicePixelRatio||1, 2));
+  if (T.ACESFilmicToneMapping !== undefined){
+    R.renderer.toneMapping = T.ACESFilmicToneMapping;
+    R.renderer.toneMappingExposure = 0.95;
+  }
+  if (T.sRGBEncoding !== undefined) R.renderer.outputEncoding = T.sRGBEncoding;
+  R.scene = new T.Scene();
+  R.cam = new T.OrthographicCamera(-1,1,1,-1,-FIT.depth,FIT.depth);
+  R.target = new T.Vector3(0, FIT.y, 0);
+  R.scene.add(new T.HemisphereLight(0xf3f6f9, 0x8d8779, .34));
+  var sun = new T.DirectionalLight(0xfff6e8, .92); sun.position.set(85,44,38); R.scene.add(sun);
+  var fill = new T.DirectionalLight(0xc9d8e6, .24); fill.position.set(-70,26,-60); R.scene.add(fill);
+  var back = new T.DirectionalLight(0xffffff, .12); back.position.set(-20,-60,30); R.scene.add(back);
+  R.scene.add(buildRoof());
+  try { R.scene.add(buildSiteWork()); } catch(e){ }
+  fitModel();
+  R.pinGrp = new T.Group(); R.scene.add(R.pinGrp);
+  R.ready = true;
+  addStageCtl(host);
+  sizeStage();
+  addEventListener('resize', sizeStage);
+
+  var drag = null;
+  cv.addEventListener('pointerdown', function(e){
+    cv.setPointerCapture(e.pointerId);
+    drag = {x:e.clientX, y:e.clientY, az:R.az, el:R.el, moved:0};
+  });
+  cv.addEventListener('pointermove', function(e){
+    if (!drag) return;
+    var dx = e.clientX-drag.x, dy = e.clientY-drag.y;
+    drag.moved = Math.max(drag.moved, Math.abs(dx)+Math.abs(dy));
+    R.az = drag.az - dx*0.006;
+    R.el = Math.max(0.10, Math.min(1.553, drag.el + dy*0.005));
+    render();
+  });
+  cv.addEventListener('pointerup', function(e){
+    var was = drag; drag = null;
+    if (was && was.moved < 6) pick(e);
+  });
+  cv.addEventListener('pointercancel', function(){ drag = null; });
+  cv.addEventListener('wheel', function(e){
+    e.preventDefault();
+    R.zoom = Math.max(.55, Math.min(2.4, R.zoom * (e.deltaY>0 ? .92 : 1.085)));
+    sizeStage();
+  }, {passive:false});
+}
+function addStageCtl(stage){
+  if (!stage || stage.querySelector('#stageCtl')) return;
+  var w = document.createElement('div'); w.id = 'stageCtl';
+  w.innerHTML = '<button data-v="top">מבט על</button><button data-v="iso">איזומטרי</button>' +
+    '<button class="z" data-z="in" aria-label="התקרבות">＋</button>' +
+    '<button class="z" data-z="out" aria-label="התרחקות">－</button>';
+  stage.appendChild(w);
+  syncStageCtl();
+  Array.prototype.forEach.call(w.querySelectorAll('[data-v]'), function(b){
+    b.addEventListener('click', function(e){
+      e.stopPropagation();
+      if (b.dataset.v === 'top'){ R.el = 1.553; R.az = 0; } else { R.el = 0.62; R.az = -0.72; }
+      syncStageCtl(); render();
+    });
+  });
+  Array.prototype.forEach.call(w.querySelectorAll('[data-z]'), function(b){
+    b.addEventListener('click', function(e){
+      e.stopPropagation();
+      R.zoom = Math.max(.55, Math.min(3.2, R.zoom * (b.dataset.z==='in' ? 1.22 : 1/1.22)));
+      sizeStage();
+    });
+  });
+}
+function syncStageCtl(){
+  var w = R.host && R.host.querySelector('#stageCtl'); if (!w) return;
+  var top = R.el > 1.40;
+  Array.prototype.forEach.call(w.querySelectorAll('[data-v]'), function(b){
+    b.setAttribute('aria-pressed', (b.dataset.v==='top') === top ? 'true' : 'false');
+  });
+}
+function drawPins(pins, scale){
+  if (!R.ready) return;
+  while (R.pinGrp.children.length) R.pinGrp.remove(R.pinGrp.children[0]);
+  (pins||[]).forEach(function(p){
+    var t = (livePins(ST.cfg).filter(function(x){return x.id===p.k;})[0] || {}).tone || 'good';
+    var m = pinMesh(t, scale), w = uvToWorld(p.u, p.v);
+    m.position.set(w.x, plazaTopY(), w.z);
+    R.pinGrp.add(m);
+  });
+  render();
+}
+
+/* ══════════ מפת חום ══════════
+   צפיפות הסימונים כטקסטורה על לוח הרחבה. אותה פונקציית צפיפות משמשת
+   גם למפות השטוחות לפי קטגוריה, כדי שאפשר יהיה להשוות ביניהן. */
+function heatCanvasRaw(pins, opaque){
+  var N = 128, c = document.createElement('canvas'); c.width = c.height = N;
+  var x = c.getContext('2d');
+  var grid = new Float32Array(N*N), i, j, k, max = 0;
+  var sig = N*0.075;
+  for (k=0;k<pins.length;k++){
+    var cx = pins[k].u*N, cy = pins[k].v*N;
+    var r = Math.ceil(sig*3);
+    for (j=Math.max(0,cy-r|0); j<Math.min(N,cy+r|0); j++)
+      for (i=Math.max(0,cx-r|0); i<Math.min(N,cx+r|0); i++){
+        var dx = i-cx, dy = j-cy;
+        grid[j*N+i] += Math.exp(-(dx*dx+dy*dy)/(2*sig*sig));
+      }
+  }
+  for (i=0;i<grid.length;i++) if (grid[i] > max) max = grid[i];
+  var ramp = ['--heat-0','--heat-1','--heat-2','--heat-3','--heat-4'].map(function(v){
+    return getComputedStyle(document.documentElement).getPropertyValue(v).trim() || '#3987e5'; });
+  var img = x.createImageData(N,N);
+  function hex(h){ h=h.replace('#',''); return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)]; }
+  var rgb = ramp.map(hex);
+  for (i=0;i<N*N;i++){
+    var t = max ? grid[i]/max : 0;
+    var p = Math.min(.999, Math.max(0,t)) * (rgb.length-1);
+    var a = rgb[Math.floor(p)], b = rgb[Math.ceil(p)], f = p - Math.floor(p);
+    var r0 = a[0]+(b[0]-a[0])*f, g0 = a[1]+(b[1]-a[1])*f, b0 = a[2]+(b[2]-a[2])*f;
+    if (opaque){
+      /* ── טקסטורה אטומה על המודל ──
+         החומר מכפיל את הטקסטורה בצבע הפאה. לבן = הרחבה כמו שהיא,
+         ולכן הצבע נמהל בלבן לפי הצפיפות במקום להישען על שקיפות —
+         שקיפות בטקסטורה הזאת שרפה את כל הלוח ללבן. */
+      var w = Math.min(1, t*1.15);
+      img.data[i*4]   = 255 + (r0-255)*w;
+      img.data[i*4+1] = 255 + (g0-255)*w;
+      img.data[i*4+2] = 255 + (b0-255)*w;
+      img.data[i*4+3] = 255;
+    } else {
+      img.data[i*4] = r0; img.data[i*4+1] = g0; img.data[i*4+2] = b0;
+      img.data[i*4+3] = Math.min(235, 40 + t*215);
+    }
+  }
+  x.putImageData(img,0,0);
+  return c;
+}
+function heatTexture(pins){
+  /* הסימונים נשמרים ביחס לאזור הסקר; הטקסטורה נמתחת על מלבן הרחבה
+     שבקובץ, ולכן צריך להמיר ביניהם לפני הציור. */
+  var F = (MESH && MESH.plazaBB) || {x0:-40,x1:40,z0:-40,z1:40};
+  var dx = (F.x1-F.x0)||1, dz = (F.z1-F.z0)||1;
+  var mapped = pins.map(function(p){
+    var w = uvToWorld(p.u, p.v);
+    return {u:(w.x - F.x0)/dx, v:(w.z - F.z0)/dz};
+  });
+  var tex = new T.CanvasTexture(heatCanvasRaw(mapped, true));
+  /* בלי זה הטקסטורה נחשבת linear בזמן שהפלט sRGB, והמרה כפולה שורפת
+     את כל לוח הרחבה ללבן — מפת החום נעלמת בתוכו. */
+  if (T.sRGBEncoding !== undefined) tex.encoding = T.sRGBEncoding;
+  tex.needsUpdate = true;
+  return tex;
+}
+function setHeat(pins){
+  if (!R.ready || !R.roofMesh) return;
+  if (R.roofMesh.material.map) R.roofMesh.material.map.dispose();
+  R.roofMesh.material.map = (pins && pins.length) ? heatTexture(pins) : null;
+  R.roofMesh.material.needsUpdate = true;
+  render();
+}
+/* מפה שטוחה לקטגוריה אחת — תכנית, כדי שאפשר יהיה להשוות זו לזו */
+function heatCanvas(pins, w, h){
+  var c = document.createElement('canvas');
+  c.width = w; c.height = h;
+  c.style.inlineSize = '100%'; c.style.display = 'block'; c.style.borderRadius = '9px';
+  var x = c.getContext('2d');
+  var F = (MESH && MESH.plazaBB) || {x0:-40,x1:40,z0:-40,z1:40};
+  var dx = (F.x1-F.x0)||1, dz = (F.z1-F.z0)||1;
+  var mapped = pins.map(function(p){
+    var wd = uvToWorld(p.u, p.v);
+    return {u:(wd.x - F.x0)/dx, v:(wd.z - F.z0)/dz};
+  });
+  x.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--sunk').trim() || '#EFECE6';
+  x.fillRect(0,0,w,h);
+  x.imageSmoothingEnabled = true;
+  x.drawImage(heatCanvasRaw(mapped), 0, 0, w, h);
+  /* מתאר הרחבה — מהמסכה שנגזרה מהמודל עצמו, כדי שהמפה תיקרא בלי המודל */
+  if (MESH && MESH.mask){
+    var N = MESH.maskN, bin = atob(MESH.mask), i;
+    var mk = document.createElement('canvas'); mk.width = mk.height = N;
+    var mx = mk.getContext('2d'), im = mx.createImageData(N,N);
+    for (i=0;i<N*N;i++){
+      var bit = (bin.charCodeAt(i>>3) >> (7-(i&7))) & 1;
+      im.data[i*4+3] = bit ? 0 : 255;
+    }
+    mx.putImageData(im,0,0);
+    x.globalCompositeOperation = 'destination-out';
+    x.drawImage(mk, 0, 0, w, h);
+    x.globalCompositeOperation = 'source-over';
+  }
+  x.strokeStyle = 'rgba(110,120,128,.4)'; x.lineWidth = 1;
+  x.strokeRect(.5,.5,w-1,h-1);
+  return c;
+}
+
+/* ══════════ רשת ══════════ */
+function api(params){
+  if (!ENDPOINT) return Promise.reject(new Error('no-endpoint'));
+  var q = Object.keys(params).map(function(k){
+    return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]); }).join('&');
+  return fetch(ENDPOINT + '?' + q, {method:'GET'})
+    .then(function(r){ if (!r.ok) throw new Error('http-' + r.status); return r.json(); });
+}
+function send(body){
+  if (!ENDPOINT) return Promise.reject(new Error('no-endpoint'));
+  var payload = JSON.stringify(body);
+  return fetch(ENDPOINT, {
+    method:'POST',
+    /* text/plain נמנע מבקשת preflight — נקודות קצה פשוטות לא עונות לה */
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body:payload
+  }).then(function(r){
+    if (!r.ok) throw new Error('http-' + r.status);
+    return r.json();
+  }).catch(function(e){
+    /* ── נפילה ברמת הרשת ──
+       אם הדפדפן חסם את התשובה (CORS) הבקשה עצמה לרוב כן יצאה. שולחים
+       שוב ב-no-cors — אי אפשר לקרוא את התשובה, ולכן תשובת סקר נשארת
+       בתור ותישלח שוב בפעם הבאה. השרת מזהה כפילות לפי rid. */
+    if (!(e instanceof TypeError)) throw e;
+    try { fetch(ENDPOINT, {method:'POST', mode:'no-cors', keepalive:true,
+      headers:{'Content-Type':'text/plain;charset=utf-8'}, body:payload}); } catch(e2){ }
+    throw e;
+  });
+}
+
+/* ══════════ תור השליחה ══════════
+   התשובה נכנסת קודם לתור מקומי ורק אז יוצאת לרשת. על גג, עם קליטה
+   חלקית, זה ההבדל בין תשובה שנאספה לבין תשובה שאבדה. */
+function queue(){ return lsGet(QKEY) || []; }
+function enqueue(b){ var q = queue(); q.push(b); lsSet(QKEY, q); }
+function dequeue(id){ lsSet(QKEY, queue().filter(function(b){ return b.rid !== id; })); }
+function flush(){
+  var q = queue();
+  if (!q.length || !ENDPOINT) return;
+  (function next(i){
+    if (i >= q.length) return;
+    send(q[i]).then(function(res){ if (res && res.ok) dequeue(q[i].rid); })
+      .catch(function(){ }).then(function(){ next(i+1); });
+  })(0);
+}
+
+/* ══════════ מסך הסקר ══════════ */
+function viewSurvey(){
+  var c = ST.cfg;
+  if (!ST.open){ viewClosed(); return; }
+  if (!isReady(c)){ viewNotReady(); return; }
+  el('main').innerHTML =
+    '<div class="split">' +
+      '<div class="sticky sec">' +
+        '<div class="card" style="overflow:hidden">' +
+          '<div id="stageBox"><div id="stage">' +
+            '<div id="hint">גררו לסיבוב · הקישו על הגג כדי לסמן</div></div></div>' +
+        '</div>' +
+        '<div id="pinbar"></div>' +
+        '<p class="note" id="pinNote"></p>' +
+        '<div class="pinList" id="pinList"></div>' +
+      '</div>' +
+      '<div class="sec">' +
+        '<div class="card pad">' +
+          '<p class="eyebrow">שאלון</p>' +
+          '<h1 style="font-size:24px; margin-block:6px 8px">' + esc(c.title) + '</h1>' +
+          '<p class="lede">' + esc(c.intro) + '</p>' +
+          (ST.offline ? '<div class="offline" style="margin-block-start:12px">' +
+            'הדף עוד לא חובר לשרת התשובות. אפשר למלא — התשובה תישמר במכשיר ' +
+            'ותישלח מעצמה ברגע שהחיבור יוגדר.</div>' : '') +
+          '<div class="q" id="roleQ"><div class="qh"><b>·</b>' +
+            '<span class="t">' + esc(c.roleLabel) + '</span>' +
+            '<span class="req">*</span></div>' +
+            '<p class="qhelp">נשמר כדי להשוות בין קבוצות. זה כל מה שנשמר עליכם.</p>' +
+            '<div class="opts" id="roleOpts"></div></div>' +
+          '<div id="qs"></div>' +
+          '<div class="hr"></div>' +
+          '<div class="row"><button class="btn primary" id="send">שליחת התשובות</button>' +
+          '<span class="note" id="sendNote"></span></div>' +
+        '</div>' +
+        '<p class="foot"><b>מה נשמר:</b> התשובות והסימונים בלבד. בלי שם, בלי אימייל, בלי מיקום. ' +
+        'הסקר הוא חלק מקורס פרטי גן 3 בפקולטה לארכיטקטורה ובינוי ערים, הטכניון.</p>' +
+      '</div>' +
+    '</div>';
+  renderPinBar(); renderRole(); renderQs(); renderPinList();
+  initStage(el('stage'), addPin);
+  drawPins(MINE.pins, 1);
+  el('send').addEventListener('click', submit);
+}
+function viewNotReady(){
+  el('main').innerHTML =
+    '<div class="card pad" style="max-inline-size:620px; margin-inline:auto">' +
+      '<p class="eyebrow">טרם פורסם</p>' +
+      '<h1 style="font-size:23px; margin-block:6px 6px">השאלון עוד לא נכתב</h1>' +
+      '<p class="lede">הסקר הזה שייך לקורס פרטי גן 3 בפקולטה לארכיטקטורה ובינוי ערים ' +
+      'בטכניון. השאלות נכתבות בימים אלה על ידי הסטודנטים. שווה לסרוק שוב בהמשך.</p>' +
+    '</div>';
+}
+function viewClosed(){
+  /* הברקוד ממשיך לעבוד חודשים אחרי שהסקר נסגר — מי שסורק אז מגיע לכאן.
+     זה המסך האחרון של השיחה עם הציבור, ולכן הוא מזמין ולא רק מודיע.
+     הנוסח נכתב בדף הקורס (שדה closing) ונקרא מכאן. */
+  var inv = (ST.cfg && (ST.cfg.closing||'').trim()) ||
+    'תודה על ההשתתפות בסקר. מכאן התכנון ממשיך — ואתם מוזמנים לתערוכה ' +
+    'ולהגשה הסופית של הקורס, בפקולטה לארכיטקטורה ובינוי ערים בטכניון.';
+  el('main').innerHTML =
+    '<div class="card pad" style="max-inline-size:560px; margin-inline:auto; text-align:center">' +
+      '<div class="glyph" style="font-size:40px; color:var(--ink-3)">●</div>' +
+      '<h1 style="font-size:25px; margin-block:14px 8px">הסקר הסתיים</h1>' +
+      '<p class="lede" style="margin-inline:auto">' +
+        (ST.closedAt ? 'נסגר ב-' + esc(heb(ST.closedAt)) + '. ' : '') +
+        esc(ST.n) + ' אנשים ענו עליו.</p>' +
+      '<p class="lede" style="margin-inline:auto; margin-block-start:10px">' +
+        esc(inv) + '</p>' +
+      '<div class="row" style="justify-content:center; margin-block-start:18px">' +
+        '<a class="btn primary" href="#/results">לתוצאות</a></div>' +
+    '</div>';
+}
+function viewThanks(){
+  var msg = (ST.cfg && (ST.cfg.thanks||'').trim()) ||
+    'התשובה נשמרה. היא נכנסת לעבודה של סטודנטים שנה ג׳ בפקולטה לארכיטקטורה.';
+  el('main').innerHTML =
+    '<div class="card pad" style="max-inline-size:520px; margin-inline:auto; text-align:center">' +
+      '<div class="glyph" style="font-size:44px; color:var(--tone-good)">✓</div>' +
+      '<h1 style="font-size:26px; margin-block:14px 8px">תודה</h1>' +
+      '<p class="lede" style="margin-inline:auto">' + esc(msg) + '</p>' +
+      '<div class="row" style="justify-content:center; margin-block-start:18px">' +
+        '<button class="btn" id="again">מילוי תשובה נוספת</button></div>' +
+    '</div>';
+  el('again').addEventListener('click', function(){
+    MINE = {role:'', which:'', answers:{}, pins:[]};
+    R.ready = false; R._pgeoTop = undefined;
+    viewSurvey(); scrollTo(0,0);
+  });
+}
+
+function renderPinBar(){
+  var b = el('pinbar'); if (!b) return;
+  var types = livePins(ST.cfg);
+  if (!types.length){ b.innerHTML = ''; el('pinNote').textContent = ''; return; }
+  if (!types.filter(function(t){return t.id===PINTYPE;}).length) PINTYPE = types[0].id;
+  b.innerHTML = types.map(function(t){
+    return '<button class="ptBtn" data-k="' + esc(t.id) + '" aria-pressed="' + (PINTYPE===t.id) + '" ' +
+      'style="color:' + toneVar(t.tone) + '"><span class="ic">' + esc(t.icon||'◉') + '</span>' +
+      '<span style="color:var(--ink)">' + esc(t.label) + '</span></button>';
+  }).join('');
+  Array.prototype.forEach.call(b.querySelectorAll('.ptBtn'), function(x){
+    x.addEventListener('click', function(){ PINTYPE = x.dataset.k; renderPinBar(); });
+  });
+  el('pinNote').textContent = 'בחרו סוג סימון, ואז הקישו על המקום בגג. אפשר לכתוב הערה לכל סימון.';
+}
+function addPin(uv){
+  if (MINE.pins.length >= 12){ toast('12 סימונים זה מספיק'); return; }
+  if (!livePins(ST.cfg).length){ toast('אין סוגי סימון בשאלון הזה'); return; }
+  MINE.pins.push({id:uid(), k:PINTYPE, u:uv.u, v:uv.v, txt:''});
+  drawPins(MINE.pins, 1); renderPinList();
+}
+function renderPinList(){
+  var w = el('pinList'); if (!w) return;
+  if (!MINE.pins.length){ w.innerHTML = '<p class="note">עוד לא סימנתם כלום.</p>'; return; }
+  w.innerHTML = MINE.pins.map(function(p, i){
+    var t = livePins(ST.cfg).filter(function(x){return x.id===p.k;})[0] ||
+            {tone:'good', icon:'◉', label:'סימון'};
+    return '<div class="pinRow">' +
+      '<span class="ic" style="color:' + toneVar(t.tone) + '">' + esc(t.icon) + '</span>' +
+      '<div class="bd"><div class="lb" style="color:' + toneVar(t.tone) + '">' + esc(t.label) + '</div>' +
+      '<input type="text" data-i="' + i + '" placeholder="מה יש כאן? (לא חובה)" ' +
+      'value="' + esc(p.txt) + '" style="margin-block-start:5px"></div>' +
+      '<button class="btn sm danger" data-del="' + i + '" aria-label="מחיקת סימון">✕</button></div>';
+  }).join('');
+  Array.prototype.forEach.call(w.querySelectorAll('input[data-i]'), function(x){
+    x.addEventListener('input', function(){ MINE.pins[+x.dataset.i].txt = x.value.slice(0,180); });
+  });
+  Array.prototype.forEach.call(w.querySelectorAll('[data-del]'), function(x){
+    x.addEventListener('click', function(){
+      MINE.pins.splice(+x.dataset.del, 1); drawPins(MINE.pins, 1); renderPinList();
+    });
+  });
+}
+function renderRole(){
+  var w = el('roleOpts'); if (!w) return;
+  var roles = ST.cfg.roles;
+  w.innerHTML = roles.map(function(r, i){
+    return '<label class="opt"><input type="radio" name="__role" id="role_' + i + '" ' +
+      'value="' + esc(r) + '"' + (MINE.role === r ? ' checked' : '') + '>' +
+      '<span>' + esc(r) + '</span></label>';
+  }).join('') +
+  '<div id="roleMore"' + (MINE.role === ROLE_ASK_MORE ? '' : ' hidden') +
+    ' style="margin-block-start:7px"><input type="text" id="roleWhich" ' +
+    'placeholder="איזו פקולטה?" value="' + esc(MINE.which || '') + '"></div>';
+  Array.prototype.forEach.call(w.querySelectorAll('input[type=radio]'), function(x){
+    x.addEventListener('change', function(){
+      MINE.role = x.value;
+      if (MINE.role !== ROLE_ASK_MORE) MINE.which = '';
+      var m = el('roleMore'); if (m) m.hidden = (MINE.role !== ROLE_ASK_MORE);
+      var f = el('roleWhich'); if (f && m && !m.hidden) f.focus();
+    });
+  });
+  var wf = el('roleWhich');
+  if (wf) wf.addEventListener('input', function(){ MINE.which = this.value; });
+}
+function renderQs(){
+  var w = el('qs'); if (!w) return;
+  var qs = liveQs(ST.cfg);
+  w.innerHTML = qs.map(function(q, i){
+    var n = (i+1<10?'0':'') + (i+1);
+    var h = '<div class="q"><div class="qh"><b>' + n + '</b><span class="t">' + esc(q.text) + '</span>' +
+            (q.req ? '<span class="req">*</span>' : '') + '</div>' +
+            (q.help ? '<p class="qhelp">' + esc(q.help) + '</p>' : '');
+    var v = MINE.answers[q.id];
+    if (q.type === 'single' || q.type === 'multi'){
+      h += '<div class="opts">' + (q.opts||[]).filter(function(o){return (o||'').trim();})
+        .map(function(o, j){
+          var on = q.type==='multi' ? (Array.isArray(v) && v.indexOf(o) >= 0) : (v === o);
+          return '<label class="opt"><input type="' + (q.type==='multi'?'checkbox':'radio') + '" ' +
+            'name="' + esc(q.id) + '" id="' + esc(q.id) + '_' + j + '" value="' + esc(o) + '"' +
+            (on?' checked':'') + '><span>' + esc(o) + '</span></label>';
+        }).join('') + '</div>';
+    } else if (q.type === 'scale'){
+      var lo = q.min||1, hi = q.max||5, s = '';
+      for (var k=lo;k<=hi;k++)
+        s += '<label><input type="radio" name="' + esc(q.id) + '" id="' + esc(q.id) + '_' + k +
+             '" value="' + k + '"' + (String(v)===String(k)?' checked':'') + '>' + k + '</label>';
+      h += '<div class="scale">' + s + '</div><div class="scaleEnds"><span>' + esc(q.lo||lo) +
+           '</span><span>' + esc(q.hi||hi) + '</span></div>';
+    } else {
+      h += '<textarea id="' + esc(q.id) + '" rows="3" maxlength="400" ' +
+           'style="font-family:var(--sans); font-size:15px" ' +
+           'placeholder="בכמה מילים…">' + esc(v||'') + '</textarea>';
+    }
+    return h + '</div>';
+  }).join('');
+  qs.forEach(function(q){
+    if (q.type === 'text'){
+      var t = el(q.id);
+      if (t) t.addEventListener('input', function(){ MINE.answers[q.id] = t.value; });
+      return;
+    }
+    Array.prototype.forEach.call(w.querySelectorAll('[name="' + q.id + '"]'), function(x){
+      x.addEventListener('change', function(){
+        if (q.type === 'multi'){
+          var picked = [];
+          Array.prototype.forEach.call(w.querySelectorAll('[name="' + q.id + '"]'), function(y){
+            if (y.checked) picked.push(y.value); });
+          MINE.answers[q.id] = picked;
+        } else {
+          MINE.answers[q.id] = q.type==='scale' ? +x.value : x.value;
+        }
+      });
+    });
+  });
+}
+function submit(){
+  if (!MINE.role){
+    toast('בחרו מי אתם');
+    var rq = el('roleQ'); if (rq) rq.scrollIntoView({block:'center', behavior:'smooth'});
+    return;
+  }
+  if (MINE.role === ROLE_ASK_MORE && !(MINE.which||'').trim()){
+    toast('איזו פקולטה?');
+    var wf = el('roleWhich'); if (wf){ wf.focus(); wf.scrollIntoView({block:'center', behavior:'smooth'}); }
+    return;
+  }
+  var qs = liveQs(ST.cfg);
+  var miss = qs.filter(function(q){
+    if (!q.req) return false;
+    var v = MINE.answers[q.id];
+    return v == null || v === '' || (Array.isArray(v) && !v.length);
+  });
+  if (miss.length){
+    toast('חסרה תשובה לשאלה ' + (qs.indexOf(miss[0])+1));
+    var n = el(miss[0].id) || el(miss[0].id + '_0');
+    if (n) n.scrollIntoView({block:'center', behavior:'smooth'});
+    return;
+  }
+  var b = el('send'); b.disabled = true; b.textContent = 'שולח…';
+  /* אותו מבנה בדיוק כמו תשובה בדף הקורס, כדי שהנתונים יהיו תואמים */
+  var body = {
+    op:'answer',
+    rid:'p' + Date.now().toString(36) + uid(),
+    ts:new Date().toISOString(),
+    role:MINE.role,
+    which:(MINE.role === ROLE_ASK_MORE ? (MINE.which||'').trim() : ''),
+    answers:MINE.answers, pins:MINE.pins, done:true, src:'public',
+    cfgAt:(ST.cfg && ST.cfg.updatedAt) || ''
+  };
+  enqueue(body);
+  send(body).then(function(res){
+    if (res && res.ok) dequeue(body.rid);
+    if (res && res.err === 'survey-closed'){
+      dequeue(body.rid); ST.open = false;
+      viewClosed(); scrollTo(0,0);
+      toast('הסקר נסגר בינתיים — התשובה לא נקלטה', 4200);
+      return;
+    }
+    viewThanks(); scrollTo(0,0);
+  }).catch(function(){ viewThanks(); scrollTo(0,0); });
+}
+
+/* ══════════ מסך התוצאות ══════════ */
+function agg(rows, cfg){
+  var every = (rows||[]).filter(function(r){ return r && r.answers; });
+  var sel = RES.roleFilter ? every.filter(function(r){ return (r.role||'') === RES.roleFilter; }) : every;
+  var out = {n:sel.length, nAll:every.length, pins:[], byQ:{}, texts:{},
+             roles:{}, roleOrder:[], first:'', last:''};
+  cfg.roles.forEach(function(r){ out.roles[r] = 0; out.roleOrder.push(r); });
+  every.forEach(function(r){
+    var k = r.role || '—';
+    if (out.roles[k] === undefined){ out.roles[k] = 0; out.roleOrder.push(k); }
+    out.roles[k]++;
+    var t = String(r.ts||'').slice(0,10);
+    if (t){ if (!out.first || t < out.first) out.first = t; if (!out.last || t > out.last) out.last = t; }
+  });
+  sel.forEach(function(r){
+    (r.pins||[]).forEach(function(p){ if (p && isFinite(p.u) && isFinite(p.v)) out.pins.push(p); });
+  });
+  liveQs(cfg).forEach(function(q){
+    if (q.type === 'text'){
+      out.texts[q.id] = sel.map(function(r){ return r.answers[q.id]; })
+                           .filter(function(s){ return s && String(s).trim(); });
+      return;
+    }
+    var counts = {}, order = [];
+    if (q.type === 'scale'){ for (var k=(q.min||1); k<=(q.max||5); k++){ counts[k]=0; order.push(String(k)); } }
+    else (q.opts||[]).filter(function(o){return (o||'').trim();})
+                     .forEach(function(o){ counts[o]=0; order.push(o); });
+    sel.forEach(function(r){
+      var v = r.answers[q.id];
+      if (v == null) return;
+      (Array.isArray(v) ? v : [v]).forEach(function(x){
+        var key = String(x);
+        if (counts[key] !== undefined) counts[key]++;
+      });
+    });
+    var answered = sel.filter(function(r){
+      var v = r.answers[q.id];
+      return v != null && v !== '' && !(Array.isArray(v) && !v.length); }).length;
+    var mean = null;
+    if (q.type === 'scale'){
+      var sum = 0, tot = 0;
+      order.forEach(function(k){ sum += (+k)*counts[k]; tot += counts[k]; });
+      mean = tot ? sum/tot : null;
+    }
+    out.byQ[q.id] = {counts:counts, order:order, answered:answered, mean:mean};
+  });
+  return out;
+}
+var SERIES = ['--s1','--s2','--s3','--s4','--s5'];
+function barsHTML(a, q){
+  var max = 0;
+  a.order.forEach(function(k){ if (a.counts[k] > max) max = a.counts[k]; });
+  var base = a.answered || 1;
+  return '<div class="bars">' + a.order.map(function(k, i){
+    var v = a.counts[k], pct = Math.round(v/base*100);
+    var col = q.type === 'scale' ? 'var(--s1)' : 'var(' + SERIES[i % SERIES.length] + ')';
+    return '<div class="bar"><span class="lb">' + esc(k) + '</span>' +
+      '<span class="tr"><span class="fl" style="inline-size:' +
+      (max ? Math.max(2, v/max*100) : 0) + '%; background:' + col + '"></span></span>' +
+      '<span class="vl">' + v + ' · ' + pct + '%</span></div>';
+  }).join('') + '</div>';
+}
+
+function viewResults(){
+  if (ST.rows === null){
+    el('main').innerHTML = '<div class="card pad"><p class="note">טוען תוצאות…</p></div>';
+    loadResults().then(viewResults).catch(function(e){
+      var closedOnly = String(e && e.message) === 'closed-only';
+      el('main').innerHTML =
+        '<div class="card pad" style="max-inline-size:560px; margin-inline:auto">' +
+          '<p class="eyebrow">' + (closedOnly ? 'עוד לא' : 'שגיאה') + '</p>' +
+          '<h1 style="font-size:22px; margin-block:6px 6px">' +
+            (closedOnly ? 'התוצאות ייפתחו בסיום הסקר' : 'לא הצלחנו לטעון את התוצאות') + '</h1>' +
+          '<p class="lede">' + (closedOnly
+            ? 'כל עוד הסקר פתוח התוצאות גלויות רק למי שמנהל אותו, כדי שמשיב לא ' +
+              'יושפע ממה שאחרים כבר ענו. ' + esc(ST.n) + ' אנשים ענו עד עכשיו.'
+            : 'בדקו חיבור לאינטרנט ונסו לרענן.') + '</p>' +
+          '<div class="row" style="margin-block-start:14px">' +
+            '<a class="btn" href="#/">' + (ST.open ? 'למילוי הסקר' : 'לדף הסקר') + '</a></div>' +
+        '</div>';
+    });
+    return;
+  }
+  var c = ST.cfg, A = agg(ST.rows, c), qs = liveQs(c), types = livePins(c);
+  if (!RES.heatType) RES.heatType = '';
+  var shown = RES.heatType ? A.pins.filter(function(p){ return p.k === RES.heatType; }) : A.pins;
+
+  var rolesBars = {counts:A.roles, order:A.roleOrder.filter(function(r){ return A.roles[r]; }),
+                   answered:A.nAll, mean:null};
+
+  el('main').innerHTML =
+    '<div class="sec">' +
+      '<div class="card pad">' +
+        '<p class="eyebrow">תוצאות' + (ST.open ? ' · הסקר עדיין פתוח' : ' · סופי') + '</p>' +
+        '<h1 style="font-size:24px; margin-block:6px 8px">' + esc(c.title) + '</h1>' +
+        '<div class="statRow" style="margin-block-start:12px">' +
+          '<div class="stat"><div class="n">' + A.nAll + '</div><div class="l">משיבים</div></div>' +
+          '<div class="stat"><div class="n">' + A.pins.length + '</div><div class="l">סימונים על המודל</div></div>' +
+          '<div class="stat"><div class="n">' + (A.roleOrder.filter(function(r){return A.roles[r];}).length) +
+            '</div><div class="l">קבוצות שהשתתפו</div></div>' +
+          /* טווח תאריכים חייב כיוון משלו — בתוך RTL הוא מתהפך ונקרא הפוך */
+          '<div class="stat"><div class="n" style="font-size:17px; padding-block:5px; ' +
+            'direction:ltr; unicode-bidi:isolate; text-align:right">' +
+            (A.first ? esc(heb(A.first)) + ' – ' + esc(heb(A.last)) : '—') +
+            '</div><div class="l">תקופת האיסוף</div></div>' +
+        '</div>' +
+        (ST.closedAt ? '<p class="note" style="margin-block-start:10px">הסקר נסגר ב-' +
+          esc(heb(ST.closedAt)) + '.</p>' : '') +
+      '</div>' +
+
+      '<div class="card pad">' +
+        '<p class="eyebrow">איפה</p>' +
+        '<h2 style="font-size:19px; margin-block:6px 4px">מפת הסימונים על המודל</h2>' +
+        '<p class="note">צפיפות הסימונים. כהה יותר — יותר אנשים סימנו שם.</p>' +
+        '<div id="heatBar" class="row" style="margin-block:12px 10px"></div>' +
+        '<div id="stageBox" class="res"><div id="stage"></div></div>' +
+        '<div id="legend"><span class="lg"><i></i>מעט · הרבה</span>' +
+          '<span class="note">' + shown.length + ' סימונים בתצוגה</span></div>' +
+        (types.length > 1 ? '<div class="hr"></div><div class="miniWrap" id="minis"></div>' : '') +
+      '</div>' +
+
+      '<div class="card pad">' +
+        '<p class="eyebrow">מי</p>' +
+        '<h2 style="font-size:19px; margin-block:6px 8px">מי ענה</h2>' +
+        barsHTML(rolesBars, {type:'single'}) +
+        '<div class="hr"></div>' +
+        '<p class="note" style="margin-block-end:8px">סינון כל התוצאות לפי קבוצה:</p>' +
+        '<div class="row" id="roleFilter"></div>' +
+      '</div>' +
+
+      qs.map(function(q, i){
+        var a = A.byQ[q.id];
+        if (q.type === 'text'){
+          var list = A.texts[q.id] || [];
+          return '<div class="card pad">' +
+            '<p class="eyebrow">שאלה ' + (i+1) + ' · פתוחה</p>' +
+            '<h2 style="font-size:18px; margin-block:6px 4px">' + esc(q.text) + '</h2>' +
+            '<p class="note" style="margin-block-end:10px">' + list.length + ' תשובות</p>' +
+            (list.length
+              ? '<div class="quotes">' + list.map(function(s){
+                  return '<p class="quote">' + esc(s) + '</p>'; }).join('') + '</div>'
+              : '<p class="note">אין עדיין תשובות לשאלה הזאת.</p>') +
+          '</div>';
+        }
+        return '<div class="card pad">' +
+          '<p class="eyebrow">שאלה ' + (i+1) +
+            (q.type==='multi' ? ' · אפשר כמה' : q.type==='scale' ? ' · סולם' : '') + '</p>' +
+          '<h2 style="font-size:18px; margin-block:6px 4px">' + esc(q.text) + '</h2>' +
+          '<p class="note">' + a.answered + ' ענו' +
+            (a.mean != null ? ' · ממוצע ' + a.mean.toFixed(2) : '') + '</p>' +
+          barsHTML(a, q) +
+        '</div>';
+      }).join('') +
+
+      '<p class="foot">הסקר נערך על ידי סטודנטים שנה ג׳ בקורס פרטי גן 3, הפקולטה ' +
+      'לארכיטקטורה ובינוי ערים, הטכניון. התשובות נאספו בעילום שם.</p>' +
+    '</div>';
+
+  /* בוחר קטגוריית הסימון למפה */
+  var hb = el('heatBar');
+  hb.innerHTML = '<button class="fchip" data-h="" aria-pressed="' + (!RES.heatType) + '">כל הסימונים</button>' +
+    types.map(function(t){
+      return '<button class="fchip" data-h="' + esc(t.id) + '" aria-pressed="' +
+        (RES.heatType===t.id) + '"><span style="color:' + toneVar(t.tone) + '">' +
+        esc(t.icon||'◉') + '</span> ' + esc(t.label) + '</button>';
+    }).join('');
+  Array.prototype.forEach.call(hb.querySelectorAll('[data-h]'), function(b){
+    b.addEventListener('click', function(){
+      RES.heatType = b.dataset.h; R.ready = false; R._pgeoTop = undefined; viewResults();
+    });
+  });
+
+  /* סינון לפי קבוצה */
+  var rf = el('roleFilter');
+  rf.innerHTML = '<button class="fchip" data-r="" aria-pressed="' + (!RES.roleFilter) + '">כולם</button>' +
+    A.roleOrder.filter(function(r){ return A.roles[r]; }).map(function(r){
+      return '<button class="fchip" data-r="' + esc(r) + '" aria-pressed="' +
+        (RES.roleFilter===r) + '">' + esc(r) + ' · ' + A.roles[r] + '</button>';
+    }).join('');
+  Array.prototype.forEach.call(rf.querySelectorAll('[data-r]'), function(b){
+    b.addEventListener('click', function(){
+      RES.roleFilter = b.dataset.r; R.ready = false; R._pgeoTop = undefined; viewResults();
+    });
+  });
+
+  /* מבט על, קרוב: מפת חום נקראת כתכנית, לא כפרספקטיבה.
+     הסימונים עצמם נשארים קטנים — הם מראים את הפיזור, החום מראה את העוצמה. */
+  initStage(el('stage'), null, {tight:true, top:true});
+  drawPins(shown, 0.34);
+  setHeat(shown);
+
+  /* מפות קטנות להשוואה בין קטגוריות */
+  var mw = el('minis');
+  if (mw){
+    mw.innerHTML = '';
+    types.forEach(function(t){
+      var ps = A.pins.filter(function(p){ return p.k === t.id; });
+      var d = document.createElement('div'); d.className = 'mini';
+      d.innerHTML = '<div class="cap"><span style="color:' + toneVar(t.tone) + '">' +
+        esc(t.icon||'◉') + '</span>' + esc(t.label) +
+        '<span class="note" style="margin-inline-start:auto">' + ps.length + '</span></div>';
+      d.appendChild(heatCanvas(ps, 260, 190));
+      mw.appendChild(d);
+    });
+  }
+}
+function loadResults(){
+  var p = {a:'results'};
+  if (ST.key) p.k = ST.key;
+  return api(p).then(function(d){
+    if (!d || !d.ok) throw new Error((d && d.err) || 'failed');
+    ST.rows = d.rows || [];
+    ST.open = !!d.open; ST.closedAt = d.closedAt || '';
+    if (d.cfg) ST.cfg = normCfg(d.cfg);
+    return ST.rows;
+  });
+}
+
+/* ══════════ מסך הניהול ══════════ */
+function viewAdmin(){
+  if (!ST.key){ viewAdminLogin(); return; }
+  var closed = !ST.open;
+  el('main').innerHTML =
+    '<div class="sec" style="max-inline-size:720px; margin-inline:auto">' +
+      '<div class="card pad">' +
+        '<div class="row"><p class="eyebrow" style="margin-inline-end:auto">ניהול הסקר</p>' +
+          '<span class="chip ' + (closed ? 'lock' : 'live') + '">' +
+            (closed ? 'סגור' : 'פתוח לתשובות') + '</span></div>' +
+        '<h1 style="font-size:22px; margin-block:8px 6px">' +
+          esc((ST.cfg && ST.cfg.title) || 'השאלון עוד לא הועלה') + '</h1>' +
+        '<div class="statRow" style="margin-block-start:12px">' +
+          '<div class="stat"><div class="n">' + ST.n + '</div><div class="l">תשובות שנאספו</div></div>' +
+          '<div class="stat"><div class="n">' + liveQs(ST.cfg).length +
+            '</div><div class="l">שאלות בשאלון</div></div>' +
+          '<div class="stat"><div class="n">' + livePins(ST.cfg).length +
+            '</div><div class="l">סוגי סימון</div></div>' +
+        '</div>' +
+        '<div class="row" style="margin-block-start:14px">' +
+          '<a class="btn" href="#/results">תוצאות' + (closed ? '' : ' (חי)') + '</a>' +
+          '<a class="btn" href="#/">תצוגת הסקר</a>' +
+          '<button class="btn sm" id="refresh">רענון</button>' +
+          '<button class="btn sm" id="logout" style="margin-inline-start:auto">יציאה</button>' +
+        '</div>' +
+      '</div>' +
+
+      '<div class="card pad">' +
+        '<p class="eyebrow">השאלון</p>' +
+        '<h2 style="font-size:18px; margin-block:6px 4px">העלאת השאלון מדף הקורס</h2>' +
+        '<p class="note" style="margin-block-end:10px">בדף הקורס, במסך עריכת הסקר — ' +
+        '״העתקה לדף הציבורי״. להדביק כאן ולשמור. זה מחליף את השאלון שהציבור רואה.</p>' +
+        '<textarea id="cfgBox" rows="5" dir="ltr" placeholder=\'{"title": …}\'></textarea>' +
+        '<div class="row" style="margin-block-start:10px">' +
+          '<button class="btn" id="cfgSave">שמירת השאלון</button>' +
+          '<span class="note" id="cfgNote"></span></div>' +
+      '</div>' +
+
+      '<div class="card pad">' +
+        '<p class="eyebrow">' + (closed ? 'הסקר סגור' : 'סיום') + '</p>' +
+        (closed
+          ? '<h2 style="font-size:18px; margin-block:6px 4px">הסקר נסגר' +
+            (ST.closedAt ? ' ב-' + esc(heb(ST.closedAt)) : '') + '</h2>' +
+            '<p class="note" style="margin-block-end:12px">הדף הציבורי מודיע שהסקר הסתיים ' +
+            'ולא מקבל עוד תשובות. התוצאות פתוחות לכולם.</p>' +
+            '<button class="btn" id="reopen">פתיחה מחדש</button>'
+          : '<div class="danger-zone">' +
+            '<h2 style="font-size:18px; margin-block:0 4px">סיום הסקר</h2>' +
+            '<p class="note" style="margin-block-end:12px">מרגע הלחיצה הדף הציבורי מפסיק ' +
+            'לקבל תשובות, והתוצאות הסופיות — מפות החום והפילוחים — נפתחות לכולם. ' +
+            'אפשר לפתוח מחדש אם צריך.</p>' +
+            '<div id="closeWrap"><button class="btn solidDanger" id="closeBtn">סיום הסקר</button></div>' +
+            '</div>') +
+      '</div>' +
+    '</div>';
+
+  if (ST.cfg) el('cfgBox').value = JSON.stringify(stripCfg(ST.cfg), null, 1);
+  el('refresh').addEventListener('click', function(){ ST.rows = null; boot(true); });
+  el('logout').addEventListener('click', function(){
+    ST.key = ''; try { sessionStorage.removeItem(KKEY); } catch(e){}
+    ST.rows = null; viewAdmin();
+  });
+  el('cfgSave').addEventListener('click', saveCfg);
+  var cb = el('closeBtn');
+  if (cb) cb.addEventListener('click', function(){
+    el('closeWrap').innerHTML =
+      '<p class="note" style="margin-block-end:8px"><b>לסגור את הסקר?</b> ' +
+      ST.n + ' תשובות נאספו עד עכשיו.</p>' +
+      '<div class="row"><button class="btn solidDanger" id="closeYes">כן, לסיים</button>' +
+      '<button class="btn" id="closeNo">ביטול</button></div>';
+    el('closeNo').addEventListener('click', viewAdmin);
+    el('closeYes').addEventListener('click', function(){
+      var b = el('closeYes'); b.disabled = true; b.textContent = 'סוגר…';
+      send({op:'close', key:ST.key}).then(function(d){
+        if (!d || !d.ok) throw new Error('failed');
+        ST.open = false; ST.closedAt = d.closedAt || new Date().toISOString();
+        ST.rows = null;
+        toast('הסקר נסגר. התוצאות פתוחות לכולם.', 4200);
+        viewAdmin(); scrollTo(0,0);
+      }).catch(function(){
+        b.disabled = false; b.textContent = 'כן, לסיים';
+        toast('הסגירה נכשלה — נסו שוב');
+      });
+    });
+  });
+  var ro = el('reopen');
+  if (ro) ro.addEventListener('click', function(){
+    ro.disabled = true;
+    send({op:'open', key:ST.key}).then(function(d){
+      if (!d || !d.ok) throw new Error('failed');
+      ST.open = true; ST.closedAt = ''; ST.rows = null;
+      toast('הסקר נפתח מחדש'); viewAdmin();
+    }).catch(function(){ ro.disabled = false; toast('הפעולה נכשלה'); });
+  });
+}
+/* מה שנשלח לשרת כשאלון — בלי שדות פנימיים של דף הקורס */
+function stripCfg(c){
+  return {title:c.title, intro:c.intro, thanks:c.thanks, roleLabel:c.roleLabel,
+          roles:c.roles, pinTypes:c.pinTypes, questions:c.questions,
+          area:c.area, updatedAt:c.updatedAt};
+}
+function saveCfg(){
+  var box = el('cfgBox'), note = el('cfgNote'), raw = box.value.trim();
+  if (!raw){ note.textContent = 'התיבה ריקה.'; return; }
+  var d;
+  try { d = JSON.parse(raw); }
+  catch(e){ note.textContent = 'זה לא JSON תקין — בדקו שההעתקה שלמה.'; return; }
+  var c = normCfg(d);
+  if (!isReady(c)){
+    note.textContent = 'חסרה כותרת או שאלה מנוסחת — הציבור יראה ״טרם פורסם״.';
+  }
+  var b = el('cfgSave'); b.disabled = true; b.textContent = 'שומר…';
+  send({op:'cfg', key:ST.key, cfg:stripCfg(c)}).then(function(res){
+    if (!res || !res.ok) throw new Error('failed');
+    ST.cfg = normCfg(res.cfg); ST.rows = null;
+    b.disabled = false; b.textContent = 'שמירת השאלון';
+    note.textContent = 'נשמר. ' + liveQs(ST.cfg).length + ' שאלות באוויר.';
+    toast('השאלון עודכן');
+  }).catch(function(){
+    b.disabled = false; b.textContent = 'שמירת השאלון';
+    note.textContent = 'השמירה נכשלה.';
+  });
+}
+function viewAdminLogin(){
+  el('main').innerHTML =
+    '<div class="card pad" style="max-inline-size:420px; margin-inline:auto">' +
+      '<p class="eyebrow">ניהול הסקר</p>' +
+      '<h1 style="font-size:21px; margin-block:6px 6px">קוד ניהול</h1>' +
+      '<p class="note" style="margin-block-end:12px">המסך הזה מיועד למי שאחראי על הסקר. ' +
+      'מכאן סוגרים אותו ורואים תוצאות בזמן שהוא פתוח.</p>' +
+      '<input type="password" id="kBox" placeholder="קוד" autocomplete="off">' +
+      '<div class="row" style="margin-block-start:10px">' +
+        '<button class="btn primary" id="kGo">כניסה</button>' +
+        '<span class="note" id="kNote"></span></div>' +
+    '</div>';
+  function go(){
+    var v = el('kBox').value.trim();
+    if (!v) return;
+    var b = el('kGo'); b.disabled = true; b.textContent = 'בודק…';
+    send({op:'auth', key:v}).then(function(d){
+      if (!d || !d.ok) throw new Error('bad');
+      ST.key = v;
+      try { sessionStorage.setItem(KKEY, v); } catch(e){}
+      ST.open = !!d.open; ST.n = d.n || 0; ST.closedAt = d.closedAt || '';
+      if (d.cfg) ST.cfg = normCfg(d.cfg);
+      ST.rows = null;
+      viewAdmin();
+    }).catch(function(){
+      b.disabled = false; b.textContent = 'כניסה';
+      el('kNote').textContent = 'קוד שגוי.';
+    });
+  }
+  el('kGo').addEventListener('click', go);
+  el('kBox').addEventListener('keydown', function(e){ if (e.key === 'Enter') go(); });
+  el('kBox').focus();
+}
+
+/* ══════════ ניתוב ══════════ */
+function route(){
+  var h = (location.hash || '#/').replace(/^#\/?/, '');
+  R.ready = false; R._pgeoTop = undefined; R.pick = null;
+  var chip = el('topChip');
+  chip.innerHTML = !ST.open
+    ? '<span class="chip lock">הסקר הסתיים</span>'
+    : (h === 'results' || h === 'admin' ? '<span class="chip live">פתוח</span>' : '');
+  el('brandT').textContent =
+    (ST.cfg && (ST.cfg.title||'').trim()) ? ST.cfg.title : 'סקר שיתוף ציבור';
+  if (h === 'results'){ viewResults(); return; }
+  if (h === 'admin'){ viewAdmin(); return; }
+  viewSurvey();
+}
+addEventListener('hashchange', route);
+
+/* ══════════ הפעלה ══════════ */
+function boot(keepHash){
+  flush();
+  var done = function(){ if (!keepHash) scrollTo(0,0); route(); };
+  if (!ENDPOINT){
+    /* ריצה מקומית לפני שהשרת מוגדר — השאלון מקובץ שלצד הדף */
+    ST.offline = true;
+    fetch('config.json?v=' + Date.now(), {cache:'no-store'})
+      .then(function(r){ if (!r.ok) throw new Error('cfg'); return r.json(); })
+      .then(function(d){ ST.cfg = normCfg(d); done(); })
+      .catch(function(){ ST.cfg = normCfg(null); done(); });
+    return;
+  }
+  api({a:'boot'}).then(function(d){
+    if (!d || !d.ok) throw new Error('boot');
+    ST.open = !!d.open; ST.closedAt = d.closedAt || ''; ST.n = d.n || 0;
+    ST.cfg = normCfg(d.cfg);
+    done();
+  }).catch(function(){
+    el('main').innerHTML =
+      '<div class="card pad" style="max-inline-size:560px; margin-inline:auto">' +
+        '<p class="eyebrow">שגיאה</p>' +
+        '<h1 style="font-size:21px; margin-block:6px 6px">לא הצלחנו לטעון את הסקר</h1>' +
+        '<p class="lede">בדקו חיבור לאינטרנט ונסו לרענן.</p></div>';
+  });
+}
+try { ST.key = sessionStorage.getItem(KKEY) || ''; } catch(e){ ST.key = ''; }
+boot();
+</script>
+</body>
+</html>
