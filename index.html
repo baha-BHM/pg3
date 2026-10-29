@@ -1335,9 +1335,13 @@ function viewAdmin(){
         '<div class="row" style="margin-block-start:14px">' +
           '<a class="btn" href="#/results">תוצאות' + (closed ? '' : ' (חי)') + '</a>' +
           '<a class="btn" href="#/">תצוגת הסקר</a>' +
+          '<button class="btn" id="copyRows">⧉ העתקה לדף הקורס</button>' +
           '<button class="btn sm" id="refresh">רענון</button>' +
           '<button class="btn sm" id="logout" style="margin-inline-start:auto">יציאה</button>' +
         '</div>' +
+        '<p class="note" id="copyNote" style="margin-block-start:8px">״העתקה לדף הקורס״ מוציאה ' +
+        'את כל התשובות כ-JSON ללוח. בדף הקורס, בלשונית התוצאות, מדביקים אותן בכרטיס ' +
+        '״ייבוא התשובות מהברקוד״ — וכל התוצאות מופיעות יחד.</p>' +
       '</div>' +
 
       '<div class="card pad">' +
@@ -1370,6 +1374,36 @@ function viewAdmin(){
     '</div>';
 
   if (ST.cfg) el('cfgBox').value = JSON.stringify(stripCfg(ST.cfg), null, 1);
+  /* ── הגשר חזרה לדף הקורס ──
+     הדף הזה הוא מערכת נפרדת, ולכן התשובות אינן מגיעות לדף הקורס מעצמן.
+     זה המקום היחיד שיש בו גם את הקוד וגם את הנתונים, ולכן ההעתקה כאן. */
+  var cr = el('copyRows');
+  if (cr) cr.addEventListener('click', function(){
+    var note = el('copyNote');
+    cr.disabled = true; cr.textContent = 'אוסף…';
+    loadResults().then(function(rows){
+      var txt = JSON.stringify(rows || []);
+      var done = function(ok){
+        cr.disabled = false; cr.textContent = ok ? '✓ הועתק' : '⧉ העתקה לדף הקורס';
+        if (note) note.textContent = ok
+          ? (rows.length + ' תשובות על הלוח. להדביק בדף הקורס ▸ תוצאות ▸ ייבוא התשובות מהברקוד.')
+          : 'ההעתקה נכשלה — סמנו את הטקסט בתיבה והעתיקו ידנית.';
+        if (!ok){
+          var ta = document.createElement('textarea');
+          ta.value = txt; ta.rows = 4; ta.dir = 'ltr';
+          ta.style.cssText = 'inline-size:100%; margin-block-start:10px';
+          note.parentNode.insertBefore(ta, note.nextSibling); ta.select();
+        }
+        setTimeout(function(){ cr.textContent = '⧉ העתקה לדף הקורס'; }, 3000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText)
+        navigator.clipboard.writeText(txt).then(function(){ done(true); }, function(){ done(false); });
+      else done(false);
+    }).catch(function(){
+      cr.disabled = false; cr.textContent = '⧉ העתקה לדף הקורס';
+      if (note) note.textContent = 'לא הצלחנו לקרוא את התשובות. נסו רענון.';
+    });
+  });
   el('refresh').addEventListener('click', function(){ ST.rows = null; boot(true); });
   el('logout').addEventListener('click', function(){
     ST.key = ''; try { sessionStorage.removeItem(KKEY); } catch(e){}
