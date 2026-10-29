@@ -91,6 +91,10 @@ main{inline-size:100%; max-inline-size:1180px; margin-inline:auto; padding:20px 
 .pad{padding:18px}
 .eyebrow{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3)}
 .lede{color:var(--ink-2); font-size:15px; line-height:1.65; max-inline-size:62ch}
+/* טקסט שהסטודנטים הקלידו — פסקת פתיחה, תודה, הודעת סיום. הוא נכתב
+   בתיבת טקסט עם שורות ורווחים שהכותב בחר, ו-HTML מקפל אותם לרצף
+   אחד אלא אם אומרים לו אחרת. */
+.userTx{white-space:pre-wrap}
 .note{font-size:13px; color:var(--ink-3); line-height:1.6}
 .hr{block-size:1px; background:var(--rule); border:0; margin-block:16px}
 .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
@@ -113,10 +117,18 @@ main{inline-size:100%; max-inline-size:1180px; margin-inline:auto; padding:20px 
 .chip.live{border-color:var(--tone-good); color:var(--tone-good)}
 .chip.lock{border-color:var(--amber); color:var(--amber); background:var(--amber-soft)}
 
+/* ── סדר המסך ──
+   בטלפון הכול טור אחד, והסדר הוא הסדר שבו עונים: קודם השאלות,
+   אחר כך הסימון על המודל, ורק בסוף כפתור השליחה. בדסקטופ יש מקום
+   לשניים זה לצד זה, ולכן המודל עובר לעמודה שמאלית דביקה. */
 .split{display:grid; gap:18px}
 @media(min-width:900px){
-  .split{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); align-items:start}
-  .split>.sticky{position:sticky; top:calc(env(safe-area-inset-top,0px) + 68px)}
+  .split{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); align-items:start;
+    grid-template-areas:"model q" "model send"}
+  .split>.mCol{grid-area:model; position:sticky;
+    top:calc(env(safe-area-inset-top,0px) + 68px)}
+  .split>.qCol{grid-area:q}
+  .split>.sCol{grid-area:send}
 }
 .sec{display:flex; flex-direction:column; gap:14px}
 .grid2{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
@@ -829,20 +841,11 @@ function viewSurvey(){
   if (!isReady(c)){ viewNotReady(); return; }
   el('main').innerHTML =
     '<div class="split">' +
-      '<div class="sticky sec">' +
-        '<div class="card" style="overflow:hidden">' +
-          '<div id="stageBox"><div id="stage">' +
-            '<div id="hint">גררו לסיבוב · הקישו על הגג כדי לסמן</div></div></div>' +
-        '</div>' +
-        '<div id="pinbar"></div>' +
-        '<p class="note" id="pinNote"></p>' +
-        '<div class="pinList" id="pinList"></div>' +
-      '</div>' +
-      '<div class="sec">' +
+      '<div class="sec qCol">' +
         '<div class="card pad">' +
           '<p class="eyebrow">שאלון</p>' +
           '<h1 style="font-size:24px; margin-block:6px 8px">' + esc(c.title) + '</h1>' +
-          '<p class="lede">' + esc(c.intro) + '</p>' +
+          '<p class="lede userTx">' + esc(c.intro) + '</p>' +
           (ST.offline ? '<div class="offline" style="margin-block-start:12px">' +
             'הדף עוד לא חובר לשרת התשובות. אפשר למלא — התשובה תישמר במכשיר ' +
             'ותישלח מעצמה ברגע שהחיבור יוגדר.</div>' : '') +
@@ -852,7 +855,24 @@ function viewSurvey(){
             '<p class="qhelp">נשמר כדי להשוות בין קבוצות. זה כל מה שנשמר עליכם.</p>' +
             '<div class="opts" id="roleOpts"></div></div>' +
           '<div id="qs"></div>' +
-          '<div class="hr"></div>' +
+        '</div>' +
+      '</div>' +
+      /* הסימון על המודל — אחרי השאלות, לפני השליחה */
+      '<div class="sec mCol">' +
+        '<div class="card pad" style="padding-block-end:0">' +
+          '<p class="eyebrow">ולסיום</p>' +
+          '<h2 style="font-size:19px; margin-block:6px 12px">סימון על המודל</h2>' +
+        '</div>' +
+        '<div class="card" style="overflow:hidden">' +
+          '<div id="stageBox"><div id="stage">' +
+            '<div id="hint">גררו לסיבוב · הקישו על הגג כדי לסמן</div></div></div>' +
+        '</div>' +
+        '<div id="pinbar"></div>' +
+        '<p class="note" id="pinNote"></p>' +
+        '<div class="pinList" id="pinList"></div>' +
+      '</div>' +
+      '<div class="sec sCol">' +
+        '<div class="card pad">' +
           '<div class="row"><button class="btn primary" id="send">שליחת התשובות</button>' +
           '<span class="note" id="sendNote"></span></div>' +
         '</div>' +
@@ -888,7 +908,7 @@ function viewClosed(){
       '<p class="lede" style="margin-inline:auto">' +
         (ST.closedAt ? 'נסגר ב-' + esc(heb(ST.closedAt)) + '. ' : '') +
         esc(ST.n) + ' אנשים ענו עליו.</p>' +
-      '<p class="lede" style="margin-inline:auto; margin-block-start:10px">' +
+      '<p class="lede userTx" style="margin-inline:auto; margin-block-start:10px">' +
         esc(inv) + '</p>' +
       '<div class="row" style="justify-content:center; margin-block-start:18px">' +
         '<a class="btn primary" href="#/results">לתוצאות</a></div>' +
@@ -901,7 +921,7 @@ function viewThanks(){
     '<div class="card pad" style="max-inline-size:520px; margin-inline:auto; text-align:center">' +
       '<div class="glyph" style="font-size:44px; color:var(--tone-good)">✓</div>' +
       '<h1 style="font-size:26px; margin-block:14px 8px">תודה</h1>' +
-      '<p class="lede" style="margin-inline:auto">' + esc(msg) + '</p>' +
+      '<p class="lede userTx" style="margin-inline:auto">' + esc(msg) + '</p>' +
       '<div class="row" style="justify-content:center; margin-block-start:18px">' +
         '<button class="btn" id="again">מילוי תשובה נוספת</button></div>' +
     '</div>';
