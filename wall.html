@@ -29,60 +29,66 @@ html,body{block-size:100%}
 body{margin:0; font-family:var(--sans); background:var(--paper); color:var(--ink);
   overflow:hidden; -webkit-font-smoothing:antialiased}
 /* ── הגיליון ──
-   כל המידות ב-cqi — אחוז מרוחב המסך — ולכן אותו דף נראה נכון על
+   כל המידות ביחידה אחת שנגזרת מגודל המסך, ולכן אותו דף נראה נכון על
    מסך 43 אינץ׳ במסדרון ועל מקרן בתערוכה בלי לגעת בכלום. */
-#wall{position:fixed; inset:0; display:flex; container-type:inline-size; background:var(--paper)}
+/* ── יחידת המידה ──
+   cqi לבדו נגזר מהרוחב בלבד, ולכן בחלון נמוך מ-16:9 — דפדפן רגיל עם
+   סרגלים, מסך 21:9 — הטקסט נשאר בגודל של מסך רחב והלוגו והקרדיט
+   נדחפים מתחת לקצה. min של השניים מקטין הכול יחד כשהגובה נגמר,
+   וב-16:9 בדיוק התוצאה זהה למה שהיה. */
+#wall{position:fixed; inset:0; display:flex; container-type:size; background:var(--paper);
+  --u:min(1cqi, 1.778cqh)}
 #stage{flex:1 1 auto; min-inline-size:0; position:relative; overflow:hidden;
   background:var(--paper); border:0; border-radius:0}
 #stage canvas{display:block; inline-size:100%; block-size:100%; touch-action:none}
 #stage .stMsg{position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  text-align:center; padding:4cqi; font-size:1.3cqi; color:var(--ink-2); line-height:1.6;
+  text-align:center; padding:calc(4 * var(--u)); font-size:calc(1.3 * var(--u)); color:var(--ink-2); line-height:1.6;
   pointer-events:none; background:var(--stage-wash)}
 #stage .stMsg.err{color:var(--amber); font-family:var(--mono); direction:ltr}
 #stageCtl{display:none !important}
 .side{flex:0 0 33%; min-inline-size:0; display:flex; flex-direction:column;
-  padding:3cqi 3.2cqi 2.4cqi; overflow:hidden}
-.k{font-family:var(--mono); font-size:.95cqi; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--ink-3); display:flex; align-items:center; gap:.9cqi; margin:0 0 1.6cqi}
-.k .dot{inline-size:.8cqi; block-size:.8cqi; border-radius:50%; background:var(--tone-good);
+  padding:calc(3 * var(--u)) calc(3.2 * var(--u)) calc(2.4 * var(--u)); overflow:hidden}
+.k{font-family:var(--mono); font-size:calc(.95 * var(--u)); letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-3); display:flex; align-items:center; gap:calc(.9 * var(--u)); margin:0 0 calc(1.6 * var(--u))}
+.k .dot{inline-size:calc(.8 * var(--u)); block-size:calc(.8 * var(--u)); border-radius:50%; background:var(--tone-good);
   flex:none; animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
-h1{font-size:3.8cqi; line-height:.95; font-weight:900; letter-spacing:-.025em; margin:0}
-.sub{font-size:1.25cqi; line-height:1.35; color:var(--ink-2); margin:1.1cqi 0 0}
-.nums{margin-block-start:auto; display:flex; flex-direction:column; gap:.9cqi}
-.n{display:flex; align-items:baseline; gap:1.1cqi}
-.n b{font-size:5.7cqi; line-height:.84; font-weight:900; letter-spacing:-.04em;
-  font-variant-numeric:tabular-nums; min-inline-size:4.8cqi}
-.n span{font-size:1.3cqi; color:var(--ink-2); line-height:1.25}
-.n.sm b{font-size:3.3cqi; min-inline-size:3.2cqi; color:var(--tone-good)}
-.scan{margin-block-start:1.9cqi; display:flex; align-items:center; gap:1.6cqi;
-  background:var(--card); border:.14cqi solid var(--ink); border-radius:1.1cqi; padding:1.3cqi 1.5cqi}
-.scan svg{inline-size:9.4cqi; block-size:9.4cqi; flex:none; display:block}
-.scan .lbl{font-size:1.75cqi; font-weight:900; line-height:1.1}
-.scan .sec{font-size:1.1cqi; color:var(--ink-2); margin-block-start:.5cqi}
-.scan .url{font-size:.85cqi; color:var(--ink-3); margin-block-start:.8cqi; direction:ltr}
-.sig{margin-block-start:1.5cqi; display:flex; align-items:flex-end; gap:1.5cqi}
-.sig img{block-size:4.2cqi; inline-size:auto; display:block; flex:none}
-.sig p{font-size:.92cqi; line-height:1.5; color:var(--ink-3); margin:0}
+h1{font-size:calc(3.8 * var(--u)); line-height:.95; font-weight:900; letter-spacing:-.025em; margin:0}
+.sub{font-size:calc(1.25 * var(--u)); line-height:1.35; color:var(--ink-2); margin:calc(1.1 * var(--u)) 0 0}
+.nums{margin-block-start:auto; display:flex; flex-direction:column; gap:calc(.9 * var(--u))}
+.n{display:flex; align-items:baseline; gap:calc(1.1 * var(--u))}
+.n b{font-size:calc(5.7 * var(--u)); line-height:.84; font-weight:900; letter-spacing:-.04em;
+  font-variant-numeric:tabular-nums; min-inline-size:calc(4.8 * var(--u))}
+.n span{font-size:calc(1.3 * var(--u)); color:var(--ink-2); line-height:1.25}
+.n.sm b{font-size:calc(3.3 * var(--u)); min-inline-size:calc(3.2 * var(--u)); color:var(--tone-good)}
+.scan{margin-block-start:calc(1.9 * var(--u)); display:flex; align-items:center; gap:calc(1.6 * var(--u));
+  background:var(--card); border:calc(.14 * var(--u)) solid var(--ink); border-radius:calc(1.1 * var(--u)); padding:calc(1.3 * var(--u)) calc(1.5 * var(--u))}
+.scan svg{inline-size:calc(9.4 * var(--u)); block-size:calc(9.4 * var(--u)); flex:none; display:block}
+.scan .lbl{font-size:calc(1.75 * var(--u)); font-weight:900; line-height:1.1}
+.scan .sec{font-size:calc(1.1 * var(--u)); color:var(--ink-2); margin-block-start:calc(.5 * var(--u))}
+.scan .url{font-size:calc(.85 * var(--u)); color:var(--ink-3); margin-block-start:calc(.8 * var(--u)); direction:ltr}
+.sig{margin-block-start:calc(1.5 * var(--u)); display:flex; align-items:flex-end; gap:calc(1.5 * var(--u))}
+.sig img{block-size:calc(4.2 * var(--u)); inline-size:auto; display:block; flex:none}
+.sig p{font-size:calc(.92 * var(--u)); line-height:1.5; color:var(--ink-3); margin:0}
 .sig p b{color:var(--ink-2); font-weight:700}
 .empty{position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  font-size:2cqi; color:var(--ink-3); pointer-events:none}
-#toast{position:fixed; inset-block-end:2cqi; inset-inline:0; text-align:center;
-  font-size:1.1cqi; color:var(--ink-2)}
+  font-size:calc(2 * var(--u)); color:var(--ink-3); pointer-events:none}
+#toast{position:fixed; inset-block-end:18px; inset-inline:0; text-align:center;
+  font-size:14px; color:var(--ink-2)}
 /* ── מסך לאורך או חלון צר ──
    לא הפורמט שהמסך נבנה לו, אבל עדיף שייראה נכון מאשר שיישבר. */
 @media (max-aspect-ratio: 1/1){
   #wall{flex-direction:column}
   #stage{flex:1 1 55%}
-  .side{flex:0 0 auto; padding:4cqi 4cqi 3cqi}
-  h1{font-size:8cqi} .sub{font-size:2.6cqi} .k{font-size:2cqi}
-  .k .dot{inline-size:1.6cqi; block-size:1.6cqi}
-  .nums{flex-direction:row; align-items:flex-end; gap:5cqi; margin-block-start:3cqi}
-  .n b{font-size:11cqi; min-inline-size:0} .n span{font-size:2.4cqi}
-  .n.sm b{font-size:6cqi}
-  .scan svg{inline-size:18cqi; block-size:18cqi}
-  .scan .lbl{font-size:3.4cqi} .scan .sec{font-size:2.2cqi} .scan .url{font-size:1.7cqi}
-  .sig img{block-size:8cqi} .sig p{font-size:1.8cqi}
+  .side{flex:0 0 auto; padding:calc(4 * var(--u)) calc(4 * var(--u)) calc(3 * var(--u))}
+  h1{font-size:calc(8 * var(--u))} .sub{font-size:calc(2.6 * var(--u))} .k{font-size:calc(2 * var(--u))}
+  .k .dot{inline-size:calc(1.6 * var(--u)); block-size:calc(1.6 * var(--u))}
+  .nums{flex-direction:row; align-items:flex-end; gap:calc(5 * var(--u)); margin-block-start:calc(3 * var(--u))}
+  .n b{font-size:calc(11 * var(--u)); min-inline-size:0} .n span{font-size:calc(2.4 * var(--u))}
+  .n.sm b{font-size:calc(6 * var(--u))}
+  .scan svg{inline-size:calc(18 * var(--u)); block-size:calc(18 * var(--u))}
+  .scan .lbl{font-size:calc(3.4 * var(--u))} .scan .sec{font-size:calc(2.2 * var(--u))} .scan .url{font-size:calc(1.7 * var(--u))}
+  .sig img{block-size:calc(8 * var(--u))} .sig p{font-size:calc(1.8 * var(--u))}
 }
 </style>
 </head>
